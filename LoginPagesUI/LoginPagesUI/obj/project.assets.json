@@ -6587,23 +6587,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\idm_p\\.nuget\\packages\\": {},
+    "C:\\Users\\Patrick\\.nuget\\packages\\": {},
     "C:\\Microsoft\\Xamarin\\NuGet\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\idm_p\\Desktop\\MASSlabactivity\\LoginPagesUI\\LoginPagesUI\\LoginPagesUI.csproj",
+      "projectUniqueName": "C:\\Users\\Patrick\\Desktop\\MASSlabactivity\\LoginPagesUI\\LoginPagesUI\\LoginPagesUI.csproj",
       "projectName": "LoginPagesUI",
-      "projectPath": "C:\\Users\\idm_p\\Desktop\\MASSlabactivity\\LoginPagesUI\\LoginPagesUI\\LoginPagesUI.csproj",
-      "packagesPath": "C:\\Users\\idm_p\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\idm_p\\Desktop\\MASSlabactivity\\LoginPagesUI\\LoginPagesUI\\obj\\",
+      "projectPath": "C:\\Users\\Patrick\\Desktop\\MASSlabactivity\\LoginPagesUI\\LoginPagesUI\\LoginPagesUI.csproj",
+      "packagesPath": "C:\\Users\\Patrick\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Patrick\\Desktop\\MASSlabactivity\\LoginPagesUI\\LoginPagesUI\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\"
       ],
       "configFilePaths": [
-        "C:\\Users\\idm_p\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Patrick\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],

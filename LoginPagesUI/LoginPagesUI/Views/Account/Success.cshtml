@@ -10,33 +10,38 @@
 @using Microsoft.AspNetCore.Http;
 
 <!DOCTYPE html>
-
-<!DOCTYPE html>
 <html>
-<body>
+<head>
 
+    <script  src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js ">
+        $(document).ready(function () {
+            $("p").click(function () {
+                $(this).hide;
+            });
+
+            $("#bntLocation").click(function () {
+                navigator.geolocation.getCurrentPosition(function (position) {
+                    var apiURL = "https://api.weatherapi.com/v1/current.json?key=5b34aa6378dd4d889bf142611201002&q=" + position.coords.latitude + "," + position.coords.longitude;
+                    $.getJSON(apiURL, function (data) {
+                        var forecast = data.current.temp_c;
+                        var weather = $("weather");
+                        weather.append(forecast + 'º C');
+                    }).error(function (e) {
+                        $("weather").append('Sorry! Not Found');
+                    })
+
+                })
+
+            });
+        });
+    </script>
+</head>
+<body>
     <p>Click the button to get your coordinates.</p>
 
-    <button onclick="getLocation()">Try It</button>
+    <button id="bntLocation" onclick="">Try It</button>
 
-    <p id="demo"></p>
-
-    <script>
-        var x = document.getElementById("demo");
-
-        function getLocation() {
-            if (navigator.geolocation) {
-                navigator.geolocation.getCurrentPosition(showPosition);
-            } else {
-                x.innerHTML = "Geolocation is not supported by this browser.";
-            }
-        }
-
-        function showPosition(position) {
-            x.innerHTML = "Latitude: " + position.coords.latitude +
-                "<br>Longitude: " + position.coords.longitude;
-        }
-    </script>
+    <p id="weather"> teste </p>
 
 </body>
 </html>
