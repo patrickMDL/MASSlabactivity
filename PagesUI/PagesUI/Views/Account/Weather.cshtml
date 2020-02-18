@@ -1,44 +1,40 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
-}
-
-
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
 <head>
-
-    <script src="~/jquery-3.4.1.min.js">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
         $(document).ready(function () {
-            $("p").click(function () {
-                $(this).hide;
-            });
-
             $("#bntLocation").click(function () {
                 navigator.geolocation.getCurrentPosition(function (position) {
-                    var apiURL = "https://api.weatherapi.com/v1/current.json?key=5b34aa6378dd4d889bf142611201002&q=" + position.coords.latitude + "," + position.coords.longitude;
-                    $.getJSON(apiURL, function (data) {
+                    var weatherAPI = "https://api.weatherapi.com/v1/current.json?key=5b34aa6378dd4d889bf142611201002&q=" + position.coords.latitude + "," + position.coords.longitude;
+
+                    $.getJSON(weatherAPI, function (data) {
                         var forecast = data.current.temp_c;
-                        var weather = $("weather");
-                        weather.append(forecast + 'º C');
+                        var weather = $("#weather");
+                        weather.append(forecast + '° C');
                     }).error(function (e) {
-                        $("weather").append('Sorry! Not Found');
-                    })
-
+                        $("#weather").append('Sorry! Not Loaded');
+                    });
                 })
-
+            });
+            $("#hide").click(function () {
+                $("p").hide();
+            });
+            $("#show").click(function () {
+                $("p").show();
             });
         });
     </script>
 </head>
 <body>
-    <p>Click the button to get your coordinates.</p>
 
-    <button id="bntLocation" onclick="">Try It</button>
+    <p>If you click on the "Hide" button, I will disappear.</p>
 
-    <p id="weather"> teste </p>
+    <button id="hide">Hide</button>
+    <button id="show">Show</button>
+
+    <button id="bntLocation">Weather</button>
+    <p id="weather"></p>
 
 </body>
 </html>
-

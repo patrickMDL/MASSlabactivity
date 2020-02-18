@@ -31,8 +31,7 @@ namespace PagesUI
                 options.MinimumSameSitePolicy = SameSiteMode.None;
             });
 
-            services.AddSession();
-            services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
+
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
         }
 
