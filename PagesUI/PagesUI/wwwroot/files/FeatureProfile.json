@@ -1,0 +1,638 @@
+/*
+  => Perfis padrão:
+    Financeiro
+    Agencias
+    Operacional
+    Diretoria
+    Gestor
+    Fretamento
+    Tesouraria
+    Trafego
+    Urbano
+    Balcao
+    Cliente
+    Cadastro
+*/
+
+[
+  {
+    "GroupId": 2,
+    "GroupName": "Cadastros",
+    "FeatureId": 6,
+    "FeatureName": "Localidades",
+    "Profiles": [
+      {
+        "Name": "Operacional"
+      },
+      {
+        "Name": "Fretamento"
+      },
+      {
+        "Name": "Urbano"
+      },
+      {
+        "Name": "Cadastro"
+      }
+    ]
+  },
+  {
+    "GroupId": 2,
+    "GroupName": "Cadastros",
+    "FeatureId": 42,
+    "FeatureName": "Itens",
+    "Profiles": [
+      {
+        "Name": "Trafego"
+      },
+      {
+        "Name": "Cadastro"
+      }
+    ]
+  },
+  {
+    "GroupId": 2,
+    "GroupName": "Cadastros",
+    "FeatureId": 3,
+    "FeatureName": "Linhas",
+    "Profiles": [
+      {
+        "Name": "Operacional"
+      },
+      {
+        "Name": "Fretamento"
+      },
+      {
+        "Name": "Urbano"
+      },
+      {
+        "Name": "Cadastro"
+      }
+    ]
+  },
+  {
+    "GroupId": 2,
+    "GroupName": "Cadastros",
+    "FeatureId": 32,
+    "FeatureName": "Seções/Tarifas",
+    "Profiles": [
+      {
+        "Name": "Urbano"
+      },
+      {
+        "Name": "Cadastro"
+      }
+    ]
+  },
+  {
+    "GroupId": 2,
+    "GroupName": "Cadastros",
+    "FeatureId": 26,
+    "FeatureName": "Rotas",
+    "Profiles": [
+      {
+        "Name": "Operacional"
+      },
+      {
+        "Name": "Fretamento"
+      },
+      {
+        "Name": "Urbano"
+      },
+      {
+        "Name": "Cadastro"
+      }
+    ]
+  },
+  {
+    "GroupId": 2,
+    "GroupName": "Cadastros",
+    "FeatureId": 4,
+    "FeatureName": "Tipos de horário",
+    "Profiles": [
+      {
+        "Name": "Operacional"
+      },
+      {
+        "Name": "Fretamento"
+      },
+      {
+        "Name": "Trafego"
+      },
+      {
+        "Name": "Urbano"
+      },
+      {
+        "Name": "Cadastro"
+      }
+    ]
+  },
+  {
+    "GroupId": 2,
+    "GroupName": "Cadastros",
+    "FeatureId": 5,
+    "FeatureName": "Horários",
+    "Profiles": [
+      {
+        "Name": "Operacional"
+      },
+      {
+        "Name": "Fretamento"
+      },
+      {
+        "Name": "Urbano"
+      },
+      {
+        "Name": "Cadastro"
+      }
+    ]
+  },
+  {
+    "GroupId": 2,
+    "GroupName": "Cadastros",
+    "FeatureId": 34,
+    "FeatureName": "Funções de funcionários",
+    "Profiles": [
+      {
+        "Name": "Operacional"
+      },
+      {
+        "Name": "Fretamento"
+      },
+      {
+        "Name": "Trafego"
+      },
+      {
+        "Name": "Urbano"
+      },
+      {
+        "Name": "Cadastro"
+      }
+    ]
+  },
+  {
+    "GroupId": 2,
+    "GroupName": "Cadastros",
+    "FeatureId": 29,
+    "FeatureName": "Funcionários",
+    "Profiles": [
+      {
+        "Name": "Agencias"
+      },
+      {
+        "Name": "Operacional"
+      },
+      {
+        "Name": "Fretamento"
+      },
+      {
+        "Name": "Trafego"
+      },
+      {
+        "Name": "Urbano"
+      },
+      {
+        "Name": "Cadastro"
+      }
+    ]
+  },
+  {
+    "GroupId": 2,
+    "GroupName": "Cadastros",
+    "FeatureId": 37,
+    "FeatureName": "Tipo de Veículo",
+    "Profiles": [
+      {
+        "Name": "Operacional"
+      },
+      {
+        "Name": "Fretamento"
+      },
+      {
+        "Name": "Trafego"
+      },
+      {
+        "Name": "Urbano"
+      },
+      {
+        "Name": "Cadastro"
+      }
+    ]
+  },
+  {
+    "GroupId": 2,
+    "GroupName": "Cadastros",
+    "FeatureId": 38,
+    "FeatureName": "Veículo",
+    "Profiles": [
+      {
+        "Name": "Operacional"
+      },
+      {
+        "Name": "Fretamento"
+      },
+      {
+        "Name": "Trafego"
+      },
+      {
+        "Name": "Urbano"
+      },
+      {
+        "Name": "Cadastro"
+      }
+    ]
+  },
+  {
+    "GroupId": 2,
+    "GroupName": "Cadastros",
+    "FeatureId": 28,
+    "FeatureName": "Agências",
+    "Profiles": [
+      {
+        "Name": "Urbano"
+      },
+      {
+        "Name": "Cadastro"
+      }
+    ]
+  },
+  {
+    "GroupId": 2,
+    "GroupName": "Cadastros",
+    "FeatureId": 35,
+    "FeatureName": "Seriais",
+    "Profiles": [
+      {
+        "Name": "Urbano"
+      },
+      {
+        "Name": "Cadastro"
+      }
+    ]
+  },
+  {
+    "GroupId": 2,
+    "GroupName": "Cadastros",
+    "FeatureId": 36,
+    "FeatureName": "Escalas",
+    "Profiles": [
+      {
+        "Name": "Operacional"
+      },
+      {
+        "Name": "Fretamento"
+      },
+      {
+        "Name": "Trafego"
+      },
+      {
+        "Name": "Urbano"
+      },
+      {
+        "Name": "Cadastro"
+      }
+    ]
+  },
+  {
+    "GroupId": 2,
+    "GroupName": "Cadastros",
+    "FeatureId": 43,
+    "FeatureName": "Endereços",
+    "Profiles": [
+      {
+        "Name": "Financeiro"
+      },
+      {
+        "Name": "Cadastro"
+      }
+    ]
+  },
+  {
+    "GroupId": 2,
+    "GroupName": "Cadastros",
+    "FeatureId": 53,
+    "FeatureName": "Feriados",
+    "Profiles": [
+      {
+        "Name": "Operacional"
+      },
+      {
+        "Name": "Cadastro"
+      }
+    ]
+  },
+  {
+    "GroupId": 2,
+    "GroupName": "Cadastros",
+    "FeatureId": 54,
+    "FeatureName": "Pontos de Paradas",
+    "Profiles": [
+      {
+        "Name": "Operacional"
+      },
+      {
+        "Name": "Cadastro"
+      }
+    ]
+  },
+  {
+    "GroupId": 2,
+    "GroupName": "Cadastros",
+    "FeatureId": 55,
+    "FeatureName": "Percursos",
+    "Profiles": [
+      {
+        "Name": "Operacional"
+      },
+      {
+        "Name": "Cadastro"
+      }
+    ]
+  },
+  {
+    "GroupId": 2,
+    "GroupName": "Cadastros",
+    "FeatureId": 30,
+    "FeatureName": "Tipo de Passagem",
+    "Profiles": [
+      {
+        "Name": "Operacional"
+      },
+      {
+        "Name": "Cadastro"
+      }
+    ]
+  },
+  {
+    "GroupId": 2,
+    "GroupName": "Cadastros",
+    "FeatureId": 33,
+    "FeatureName": "Regra por Tipo de Passagem",
+    "Profiles": [
+      {
+        "Name": "Operacional"
+      },
+      {
+        "Name": "Cadastro"
+      }
+    ]
+  },
+  {
+    "GroupId": 2,
+    "GroupName": "Cadastros",
+    "FeatureId": 41,
+    "FeatureName": "Passageiros",
+    "Profiles": [
+      {
+        "Name": "Operacional"
+      },
+      {
+        "Name": "Cadastro"
+      }
+    ]
+  },
+  {
+    "GroupId": 2,
+    "GroupName": "Cadastros",
+    "FeatureId": 8,
+    "FeatureName": "Instituição",
+    "Profiles": [
+      {
+        "Name": "Operacional"
+      },
+      {
+        "Name": "Cadastro"
+      }
+    ]
+  },
+  {
+    "GroupId": 5,
+    "GroupName": "Relatórios",
+    "FeatureId": 56,
+    "FeatureName": "Resumo Órgão Gestor",
+    "Profiles": [
+      {
+        "Name": "Financeiro"
+      }
+    ]
+  },
+  {
+    "GroupId": 5,
+    "GroupName": "Relatórios",
+    "FeatureId": 11,
+    "FeatureName": "RMF",
+    "Profiles": [
+      {
+        "Name": "Financeiro"
+      },
+      {
+        "Name": "Agencias"
+      },
+      {
+        "Name": "Tesouraria"
+      }
+    ]
+  },
+  {
+    "GroupId": 5,
+    "GroupName": "Relatórios",
+    "FeatureId": 20,
+    "FeatureName": "Demanda por Seção",
+    "Profiles": [
+      {
+        "Name": "Financeiro"
+      },
+      {
+        "Name": "Diretoria"
+      }
+    ]
+  },
+  {
+    "GroupId": 5,
+    "GroupName": "Relatórios",
+    "FeatureId": 15,
+    "FeatureName": "Operacional",
+    "Profiles": [
+      {
+        "Name": "Financeiro"
+      },
+      {
+        "Name": "Trafego"
+      }
+    ]
+  },
+  {
+    "GroupId": 5,
+    "GroupName": "Relatórios",
+    "FeatureId": 24,
+    "FeatureName": "Passagens",
+    "Profiles": [
+      {
+        "Name": "Financeiro"
+      },
+      {
+        "Name": "Diretoria"
+      }
+    ]
+  },
+  {
+    "GroupId": 5,
+    "GroupName": "Relatórios",
+    "FeatureId": 58,
+    "FeatureName": "Cobradores em Aberto",
+    "Profiles": [
+      {
+        "Name": "Financeiro"
+      },
+      {
+        "Name": "Operacional"
+      }
+    ]
+  },
+  {
+    "GroupId": 5,
+    "GroupName": "Relatórios",
+    "FeatureId": 60,
+    "FeatureName": "Exportação Contábil",
+    "Profiles": [
+      {
+        "Name": "Financeiro"
+      },
+      {
+        "Name": "Operacional"
+      }
+    ]
+  },
+  {
+    "GroupId": 5,
+    "GroupName": "Relatórios",
+    "FeatureId": 65,
+    "FeatureName": "QIOM",
+    "Profiles": [
+      {
+        "Name": "Financeiro"
+      },
+      {
+        "Name": "Operacional"
+      }
+    ]
+  },
+  {
+    "GroupId": 3,
+    "GroupName": "Fechamentos",
+    "FeatureId": 24,
+    "FeatureName": "Fechamento Agencia",
+    "Profiles": [
+      {
+        "Name": "Financeiro"
+      },
+      {
+        "Name": "Agencias"
+      },
+      {
+        "Name": "Operacional"
+      },
+      {
+        "Name": "Fretamento"
+      },
+      {
+        "Name": "Urbano"
+      },
+      {
+        "Name": "Cliente"
+      }
+    ]
+  },
+  {
+    "GroupId": 3,
+    "GroupName": "Fechamentos",
+    "FeatureId": 10,
+    "FeatureName": "Fechamento Embarcado",
+    "Profiles": [
+      {
+        "Name": "Financeiro"
+      },
+      {
+        "Name": "Agencias"
+      },
+      {
+        "Name": "Operacional"
+      },
+      {
+        "Name": "Fretamento"
+      },
+      {
+        "Name": "Urbano"
+      },
+      {
+        "Name": "Cliente"
+      }
+    ]
+  },
+  {
+    "GroupId": 3,
+    "GroupName": "Fechamentos",
+    "FeatureId": 21,
+    "FeatureName": "Fechamento Voucher",
+    "Profiles": [
+      {
+        "Name": "Financeiro"
+      },
+      {
+        "Name": "Agencias"
+      }
+    ]
+  },
+  {
+    "GroupId": 3,
+    "GroupName": "Fechamentos",
+    "FeatureId": 23,
+    "FeatureName": "Fechamento Manual",
+    "Profiles": [
+      {
+        "Name": "Agencias"
+      },
+      {
+        "Name": "Operacional"
+      },
+      {
+        "Name": "Fretamento"
+      },
+      {
+        "Name": "Urbano"
+      }
+    ]
+  },
+  {
+    "GroupId": 3,
+    "GroupName": "Fechamentos",
+    "FeatureId": 22,
+    "FeatureName": "Fechamento Credito",
+    "Profiles": [
+      {
+        "Name": "Agencias"
+      }
+    ]
+  },
+  {
+    "GroupId": 4,
+    "GroupName": "Lançamentos",
+    "FeatureId": 49,
+    "FeatureName": "Voucher",
+    "Profiles": [
+      {
+        "Name": "Financeiro"
+      }
+    ]
+  },
+  {
+    "GroupId": 4,
+    "GroupName": "Lançamentos",
+    "FeatureId": 50,
+    "FeatureName": "Bilhetes",
+    "Profiles": [
+      {
+        "Name": "Financeiro"
+      }
+    ]
+  }
+]

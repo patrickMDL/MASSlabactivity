@@ -10,31 +10,38 @@
 
                     $.getJSON(weatherAPI, function (data) {
                         var forecast = data.current.temp_c;
+                        var wind_speed = data.current.wind_kph;
                         var weather = $("#weather");
-                        weather.append(forecast + '° C');
+                        var location = data.location.name;
+                        var conditions = data.current.conditions;
+                        weather.append('Temperature:' + forecast + '° C <br/>' + 'Wind Speed:' + wind_speed + ' KM/H' + '<br/>'  + 'City: ' + location + ' <br/>');
+                        
                     }).error(function (e) {
                         $("#weather").append('Sorry! Not Loaded');
                     });
                 })
-            });
-            $("#hide").click(function () {
-                $("p").hide();
-            });
-            $("#show").click(function () {
-                $("p").show();
             });
         });
     </script>
 </head>
 <body>
 
-    <p>If you click on the "Hide" button, I will disappear.</p>
 
-    <button id="hide">Hide</button>
-    <button id="show">Show</button>
 
-    <button id="bntLocation">Weather</button>
-    <p id="weather"></p>
+    <div class="card card-default card-condensed text-black">
+        <div class="card-header">
+            <div class="card-title">
+                Basic Cards
+            </div>
+        </div>
+        <div class="card-block">
+            <p id="weather"></p>
+        </div>
+    </div>
+    <button id="bntLocation" class="btn btn-primary btn-cons">
+        Weather
+    </button>
+
 
 </body>
 </html>

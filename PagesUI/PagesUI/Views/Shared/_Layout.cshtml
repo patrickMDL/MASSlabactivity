@@ -1,74 +1,318 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
+    <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - PagesUI</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-touch-fullscreen" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="description" content="@ViewBag.Description" />
+    <meta name="keywords" content="paf.online, paf online, pafonline, fisco, secretaria da fazenda, controle de vendas, bilhete eletrônico embarcado, bilhete de embarque, bilhete eletrônico de embarque, monitoramento de venda fiscal, impressora fiscal, controle fiscal, velocidade fiscal" />
+    <meta name="author" content="MASS Labs" />
+    <meta name="robots" content="noindex" />
 
-    <environment include="Development">
-        <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
-        <link rel="stylesheet" href="~/css/site.css" />
+    <link rel="icon" type="image/x-icon" href="../img/favicon.png" />
+
+    <title>MASS Labs - Mais velocidade, agilidade e transparência no controle da operação</title>
+
+    <environment names="Development">
+        <link rel="apple-touch-icon" href="../pages/ico/60.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="../pages/ico/76.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="../pages/ico/120.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="../pages/ico/152.png">
+        <link href="../plugins/pace/pace-theme-flash.css" rel="stylesheet" type="text/css" />
+        <link href="../plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+        <link href="../plugins/font-awesome/css/font-awesome.css" rel="stylesheet" type="text/css" />
+        <link href="../plugins/jquery-scrollbar/jquery.scrollbar.css" rel="stylesheet" type="text/css" media="screen" />
+        <link href="../plugins/select2/css/select2.min.css" rel="stylesheet" type="text/css" media="screen" />
+        <link href="../plugins/switchery/css/switchery.min.css" rel="stylesheet" type="text/css" media="screen" />
+        <link href="../plugins/nvd3/nv.d3.min.css" rel="stylesheet" type="text/css" media="screen" />
+        <link href="../plugins/mapplic/css/mapplic.css" rel="stylesheet" type="text/css" />
+        <link href="../plugins/rickshaw/rickshaw.css" rel="stylesheet" type="text/css" />
+        <link href="../plugins/bootstrap-datepicker/css/datepicker3.css" rel="stylesheet" type="text/css" media="screen">
+        <link href="../plugins/jquery-metrojs/MetroJs.css" rel="stylesheet" type="text/css" media="screen" />
+        <link href="../plugins/jquery-nouislider/jquery.nouislider.css" media="screen" type="text/css" rel="stylesheet" />
+        <link media="screen" type="text/css" rel="stylesheet" href="../plugins/ion-slider/css/ion.rangeSlider.css" />
+        <link media="screen" type="text/css" rel="stylesheet" href="../plugins/ion-slider/css/ion.rangeSlider.skinFlat.css" />
+        <link href="../pages/css/pages-icons.css" rel="stylesheet" type="text/css">
+        <link class="main-stylesheet" href="../pages/css/pages.css" rel="stylesheet" type="text/css" />
+        <link href="../css/style.css" rel="stylesheet" type="text/css">
+        <link href="../plugins/bootstrap-daterangepicker/daterangepicker-bs3.css" rel="stylesheet" type="text/css" media="screen">
+        <link href="../plugins/bootstrap-timepicker/bootstrap-timepicker.min.css" rel="stylesheet" type="text/css" media="screen">
+        <link href="../plugins/bootstrap-tag/bootstrap-tagsinput.css" rel="stylesheet" type="text/css" />
+        <link href="../plugins/dropzone/css/dropzone.css" rel="stylesheet" type="text/css" />
+        <link href="../plugins/summernote/css/summernote.css" rel="stylesheet" type="text/css" media="screen">
+        <link href="../plugins/jquery-datatable/media/css/dataTables.bootstrap.css" rel="stylesheet" type="text/css" />
+        <link href="../plugins/jquery-datatable/extensions/FixedColumns/css/dataTables.fixedColumns.min.css" rel="stylesheet" type="text/css" />
+        <link href="../plugins/datatables-responsive/css/datatables.responsive.css" rel="stylesheet" type="text/css" media="screen" />
+        <link href="../css/buttons.dataTables.min.css" rel="stylesheet" id="bootstrap-css">
     </environment>
-    <environment exclude="Development">
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
-              asp-fallback-href="~/lib/bootstrap/dist/css/bootstrap.min.css"
-              asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute" />
-        <link rel="stylesheet" href="~/css/site.min.css" asp-append-version="true" />
-    </environment>
+
+    @RenderSection("css", required: false)
 </head>
-<body>
-    <nav class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a asp-area="" asp-controller="Home" asp-action="Index" class="navbar-brand">PagesUI</a>
-            </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li><a asp-area="" asp-controller="Home" asp-action="Index">Home</a></li>
-                    <li><a asp-area="" asp-controller="Home" asp-action="About">About</a></li>
-                    <li><a asp-area="" asp-controller="Home" asp-action="Contact">Contact</a></li>
-                </ul>
+<body class="fixed-header dashboard">
+
+    <div class="page-container ">
+        <div class="page-content-wrapper">
+            @RenderBody()
+        </div>
+        <div id="modalAjax" class="modal">
+            <div class="loading">
             </div>
         </div>
-    </nav>
-
-    <partial name="_CookieConsentPartial" />
-
-    <div class="container body-content">
-        @RenderBody()
-        <hr />
-        <footer>
-            <p>&copy; 2020 - PagesUI</p>
-        </footer>
+        <div id="modalAjaxWait" class="modal text-center">
+            <p class="small hint-text wait-loading ">Aguarde, isso pode demorar um pouco...</p>
+            <div class="loading"></div>
+        </div>
     </div>
+    <div class="overlay hide" data-pages="search">
+        <!-- BEGIN Overlay Content !-->
+        <div class="overlay-content has-results m-t-20">
+            <!-- BEGIN Overlay Header !-->
+            <div class="container-fluid">
+                <!-- BEGIN Overlay Logo !-->
+                <img class="overlay-brand" src="../img/logo.png" alt="logo" data-src="../img/logo.png" data-src-retina="../img/logo.png">
+                <!-- END Overlay Logo !-->
+                <!-- BEGIN Overlay Close !-->
+                <a href="#" class="close-icon-light overlay-close text-black fs-16">
+                    <i class="pg-close"></i>
+                </a>
+                <!-- END Overlay Close !-->
+            </div>
+            <!-- END Overlay Header !-->
+            <div class="container-fluid">
+                <!-- BEGIN Overlay Controls !-->
+                <input id="overlay-search" class="no-border overlay-search bg-transparent" placeholder="Search..." autocomplete="off" spellcheck="false">
+                <br>
+                <div class="inline-block">
+                    <div class="checkbox right">
+                        <input id="checkboxn" type="checkbox" value="1" checked="checked">
+                        <label for="checkboxn"><i class="fa fa-search"></i> Search within page</label>
+                    </div>
+                </div>
+                <div class="inline-block m-l-10">
+                    <p class="fs-13">Press enter to search</p>
+                </div>
+                <!-- END Overlay Controls !-->
+            </div>
+            <!-- BEGIN Overlay Search Results, This part is for demo purpose, you can add anything you like !-->
+            <div class="container-fluid">
+                <span>
+                    <strong>suggestions :</strong>
+                </span>
+                <span id="overlay-suggestions"></span>
+                <br>
+                <div class="search-results m-t-40">
+                    <p class="bold">Pages Search Results</p>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <!-- BEGIN Search Result Item !-->
+                            <div class="">
+                                <!-- BEGIN Search Result Item Thumbnail !-->
+                                <div class="thumbnail-wrapper d48 circular bg-success text-white inline m-t-10">
+                                    <div>
+                                        <img width="50" height="50" src="../img/profile_unknown_user_small.png" data-src="../img/profile_unknown_user_small.png" data-src-retina="../img/profile_unknown_user_small.png" alt="">
+                                    </div>
+                                </div>
+                                <!-- END Search Result Item Thumbnail !-->
+                                <div class="p-l-10 inline p-t-5">
+                                    <h5 class="m-b-5"><span class="semi-bold result-name">ice cream</span> on pages</h5>
+                                    <p class="hint-text">via john smith</p>
+                                </div>
+                            </div>
+                            <!-- END Search Result Item !-->
+                            <!-- BEGIN Search Result Item !-->
+                            <div class="">
+                                <!-- BEGIN Search Result Item Thumbnail !-->
+                                <div class="thumbnail-wrapper d48 circular bg-success text-white inline m-t-10">
+                                    <div>T</div>
+                                </div>
+                                <!-- END Search Result Item Thumbnail !-->
+                                <div class="p-l-10 inline p-t-5">
+                                    <h5 class="m-b-5"><span class="semi-bold result-name">ice cream</span> related topics</h5>
+                                    <p class="hint-text">via pages</p>
+                                </div>
+                            </div>
+                            <!-- END Search Result Item !-->
+                            <!-- BEGIN Search Result Item !-->
+                            <div class="">
+                                <!-- BEGIN Search Result Item Thumbnail !-->
+                                <div class="thumbnail-wrapper d48 circular bg-success text-white inline m-t-10">
+                                    <div>
+                                        <i class="fa fa-headphones large-text "></i>
+                                    </div>
+                                </div>
+                                <!-- END Search Result Item Thumbnail !-->
+                                <div class="p-l-10 inline p-t-5">
+                                    <h5 class="m-b-5"><span class="semi-bold result-name">ice cream</span> music</h5>
+                                    <p class="hint-text">via pagesmix</p>
+                                </div>
+                            </div>
+                            <!-- END Search Result Item !-->
+                        </div>
+                        <div class="col-md-6">
+                            <!-- BEGIN Search Result Item !-->
+                            <div class="">
+                                <!-- BEGIN Search Result Item Thumbnail !-->
+                                <div class="thumbnail-wrapper d48 circular bg-info text-white inline m-t-10">
+                                    <div>
+                                        <i class="fa fa-facebook large-text "></i>
+                                    </div>
+                                </div>
+                                <!-- END Search Result Item Thumbnail !-->
+                                <div class="p-l-10 inline p-t-5">
+                                    <h5 class="m-b-5"><span class="semi-bold result-name">ice cream</span> on facebook</h5>
+                                    <p class="hint-text">via facebook</p>
+                                </div>
+                            </div>
+                            <!-- END Search Result Item !-->
+                            <!-- BEGIN Search Result Item !-->
+                            <div class="">
+                                <!-- BEGIN Search Result Item Thumbnail !-->
+                                <div class="thumbnail-wrapper d48 circular bg-complete text-white inline m-t-10">
+                                    <div>
+                                        <i class="fa fa-twitter large-text "></i>
+                                    </div>
+                                </div>
+                                <!-- END Search Result Item Thumbnail !-->
+                                <div class="p-l-10 inline p-t-5">
+                                    <h5 class="m-b-5">Tweats on<span class="semi-bold result-name"> ice cream</span></h5>
+                                    <p class="hint-text">via twitter</p>
+                                </div>
+                            </div>
+                            <!-- END Search Result Item !-->
+                            <!-- BEGIN Search Result Item !-->
+                            <div class="">
+                                <!-- BEGIN Search Result Item Thumbnail !-->
+                                <div class="thumbnail-wrapper d48 circular text-white bg-danger inline m-t-10">
+                                    <div>
+                                        <i class="fa fa-google-plus large-text "></i>
+                                    </div>
+                                </div>
+                                <!-- END Search Result Item Thumbnail !-->
+                                <div class="p-l-10 inline p-t-5">
+                                    <h5 class="m-b-5">Circles on<span class="semi-bold result-name"> ice cream</span></h5>
+                                    <p class="hint-text">via google plus</p>
+                                </div>
+                            </div>
+                            <!-- END Search Result Item !-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- END Overlay Search Results !-->
+        </div>
+        <div class="map-container full-width full-height">
+            <div id="google-map" class="full-width full-height"></div>
+        </div>
+        <!-- END Overlay Content !-->
+    </div>
+    <environment names="Development">
 
-    <environment include="Development">
-        <script src="~/lib/jquery/dist/jquery.js"></script>
-        <script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
-        <script src="~/js/site.js" asp-append-version="true"></script>
-    </environment>
-    <environment exclude="Development">
-        <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-3.3.1.min.js"
-                asp-fallback-src="~/lib/jquery/dist/jquery.min.js"
-                asp-fallback-test="window.jQuery"
-                crossorigin="anonymous"
-                integrity="sha384-tsQFqpEReu7ZLhBV2VZlAu7zcOV+rXbYlF2cqB8txI/8aZajjp4Bqd+V6D5IgvKT">
+        @*Scripts do jquery do botão de excel e pdf (seguir essa ordem de importação) *@
+        <script type="text/javascript" language="javascript" src="../js/pdf/jquery-3.3.1.js"></script>
+
+        <script src="../plugins/pace/pace.min.js" type="text/javascript"></script>
+        <script src="../plugins/jquery/jquery-1.11.1.min.js" type="text/javascript"></script>
+        <script src="../plugins/modernizr.custom.js" type="text/javascript"></script>
+        <script src="../plugins/jquery-ui/jquery-ui.min.js" type="text/javascript"></script>
+        <script src="../plugins/tether/js/tether.min.js" type="text/javascript"></script>
+        <script src="../plugins/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+        <script src="../plugins/jquery/jquery-easy.js" type="text/javascript"></script>
+        <script src="../plugins/jquery-unveil/jquery.unveil.min.js" type="text/javascript"></script>
+        <script src="../plugins/jquery-ios-list/jquery.ioslist.min.js" type="text/javascript"></script>
+        <script src="../plugins/jquery-actual/jquery.actual.min.js"></script>
+        <script src="../plugins/jquery-scrollbar/jquery.scrollbar.min.js"></script>
+        <script type="text/javascript" src="../plugins/select2/js/select2.full.min.js"></script>
+        <script type="text/javascript" src="../plugins/classie/classie.js"></script>
+        <script src="../plugins/switchery/js/switchery.min.js" type="text/javascript"></script>
+        <script src="../plugins/nvd3/lib/d3.v3.js" type="text/javascript"></script>
+        <script src="../plugins/nvd3/nv.d3.min.js" type="text/javascript"></script>
+        <script src="../plugins/nvd3/src/utils.js" type="text/javascript"></script>
+        <script src="../plugins/nvd3/src/tooltip.js" type="text/javascript"></script>
+        <script src="../plugins/nvd3/src/interactiveLayer.js" type="text/javascript"></script>
+        <script src="../plugins/nvd3/src/models/axis.js" type="text/javascript"></script>
+        <script src="../plugins/nvd3/src/models/line.js" type="text/javascript"></script>
+        <script src="../plugins/nvd3/src/models/lineWithFocusChart.js" type="text/javascript"></script>
+        <script src="../plugins/mapplic/js/hammer.js"></script>
+        <script src="../plugins/mapplic/js/jquery.mousewheel.js"></script>
+        <script src="../plugins/mapplic/js/mapplic.js"></script>
+        <script src="../plugins/rickshaw/rickshaw.js"></script>
+        <script src="../plugins/jquery-metrojs/MetroJs.min.js" type="text/javascript"></script>
+        <script src="../plugins/jquery-sparkline/jquery.sparkline.min.js" type="text/javascript"></script>
+        <script src="../plugins/skycons/skycons.js" type="text/javascript"></script>
+        <script src="../plugins/bootstrap-datepicker/js/bootstrap-datepicker.js" type="text/javascript"></script>
+        <script src="../plugins/bootstrap-datepicker/js/locales/bootstrap-datepicker.pt-BR.js" type="text/javascript"></script>
+        <script type="text/javascript" src="../plugins/jquery-nouislider/jquery.nouislider.min.js"></script>
+        <script type="text/javascript" src="../plugins/jquery-nouislider/jquery.liblink.js"></script>
+        <script src="../pages/js/pages.min.js"></script>
+        <script src="../js/dashboard.js" type="text/javascript"></script>
+        <script src="../js/scripts.js" type="text/javascript"></script>
+
+        @*Scripts do botão de excel e pdf (seguir essa ordem de importação) *@
+        <script type="text/javascript" language="javascript" src="../js/pdf/jquery.dataTables.min.js"></script>
+        <script type="text/javascript" language="javascript" src="../js/pdf/dataTables.buttons.min.js"></script>
+        <script type="text/javascript" language="javascript" src="../js/pdf/jszip.min.js"></script>
+        <script type="text/javascript" language="javascript" src="../js/pdf/pdfmake.min.js"></script>
+        <script type="text/javascript" language="javascript" src="../js/pdf/vfs_fonts.js"></script>
+        <script type="text/javascript" language="javascript" src="../js/pdf/buttons.html5.min.js"></script>
+        <script type="text/javascript" language="javascript" src="../js/buttons.colVis.min.js"></script>
+        <script src="../plugins/jquery-datatable/extensions/TableTools/js/dataTables.tableTools.min.js" type="text/javascript"></script>
+        <script src="../plugins/jquery-datatable/media/js/dataTables.bootstrap.js" type="text/javascript"></script>
+        <script src="../plugins/jquery-datatable/extensions/Bootstrap/jquery-datatable-bootstrap.js" type="text/javascript"></script>
+        <script type="text/javascript" src="../plugins/datatables-responsive/js/datatables.responsive.js"></script>
+        <script type="text/javascript" src="../plugins/datatables-responsive/js/lodash.min.js"></script>
+        <script src="../plugins/moment/moment-with-locales.min.js"></script>
+        <script src="../plugins/moment/moment.min.js"></script>
+        <script src="../plugins/bootstrap-daterangepicker/daterangepicker.js"></script>
+        <script src="../plugins/bootstrap-datepicker/js/bootstrap-datepicker.js"></script>
+        <script src="../plugins/bootstrap-timepicker/bootstrap-timepicker.min.js"></script>
+        <script src="../plugins/bootstrap-datepicker/js/locales/bootstrap-datepicker.pt-br.js"></script>
+        <script src="../plugins/jquery-datatable/extensions/Moment/datetime-moment.js"></script>
+
+        <script src="../plugins/bootstrap-typehead/typeahead.bundle.min.js"></script>
+        <script src="../plugins/bootstrap-typehead/typeahead.jquery.min.js"></script>
+        <script src="../plugins/handlebars/handlebars-v4.0.5.js"></script>
+        <script type="text/javascript" src="../plugins/jquery-autonumeric/autoNumeric.js"></script>
+        <script type="text/javascript" src="../plugins/dropzone/dropzone.min.js"></script>
+        <script src="../plugins/jquery-validation/js/jquery.validate.js" type="text/javascript"></script>
+        <script src="../plugins/jquery-validation/js/jquery.validate.pt-br.js" type="text/javascript"></script>
+        <script src="../plugins/summernote/js/summernote.min.js" type="text/javascript"></script>
+        <script src="../plugins/moment/moment.min.js"></script>
+        <script src="../plugins/bootstrap-form-wizard/js/jquery.bootstrap.wizard.min.js" type="text/javascript"></script>
+        <script src="../js/form_functions.js" type="text/javascript"></script>
+        <script src="../js/report_functions.js" type="text/javascript"></script>
+        <script src="../js/timeago/dist/timeago.min.js" type="text/javascript"></script>
+        <script src="~/js/classes/Register.js"></script>
+        <script src="~/plugins/jquery-inputmask/jquery.inputmask.min.js" type="text/javascript"></script>
+        <script src="~/js/Mascara.js" type="text/javascript"></script>
+        <script src="~/js/jquery.mask.min.js"></script>
+        <script src="~/js/jquery.validate.cnpj.cpf.js"></script>
+        <!-- Salesflare tracking -->
+        <script src="https://storage.googleapis.com/lib.salesflare.com/discuss.js/dist/discuss.js"></script>
+        <!-- XDStore uses easyXDM which uses json -->
+        <script type="text/javascript" src="https://storage.googleapis.com/lib.salesflare.com/easyXDM-2.4.19.3/easyXDM.min.js"></script>
+        <script type="text/javascript">easyXDM.DomHelper.requiresJSON("https://storage.googleapis.com/lib.salesflare.com/easyXDM-2.4.19.3/json2.js");</script>
+        <script type="text/javascript" src="https://storage.googleapis.com/lib.salesflare.com/xdstore.js/XDStore.js"></script>
+        <script src="https://storage.googleapis.com/track.salesflare.com/flare.js"></script>
+        <script src="~/js/Core/Core.Custom.js"></script>
+        <script src="~/js/notifications.js"></script>
+        <script src="~/js/OmniBus.js"></script>
+        <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js"></script>
+        <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&key=AIzaSyAOL7Sc32394IULKkPi04jaeXP-Fs2R738&libraries=visualization" type="text/javascript"></script>
+        <script type="text/javascript" src="~/js/google_map.js"></script>
+        <script type="text/javascript" src="~/js/google_heatmap.js"></script>
+
+        <script>
+            var flare = new Flare();
+            flare.track("tIh6_ADQuTewa1vCSNv5NfEFQJFleMm2C5R-856zrqoVc");
         </script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"
-                asp-fallback-src="~/lib/bootstrap/dist/js/bootstrap.min.js"
-                asp-fallback-test="window.jQuery && window.jQuery.fn && window.jQuery.fn.modal"
-                crossorigin="anonymous"
-                integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd">
-        </script>
-        <script src="~/js/site.min.js" asp-append-version="true"></script>
+
     </environment>
 
     @RenderSection("Scripts", required: false)
+    @RenderSection("ScriptsReady", required: false)
+
 </body>
 </html>

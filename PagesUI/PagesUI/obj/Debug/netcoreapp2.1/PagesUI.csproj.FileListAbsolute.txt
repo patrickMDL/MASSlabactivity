@@ -5,6 +5,9 @@ C:\Users\Patrick\Desktop\MASSlabactivity\PagesUI\PagesUI\bin\Debug\netcoreapp2.1
 C:\Users\Patrick\Desktop\MASSlabactivity\PagesUI\PagesUI\bin\Debug\netcoreapp2.1\PagesUI.runtimeconfig.json
 C:\Users\Patrick\Desktop\MASSlabactivity\PagesUI\PagesUI\bin\Debug\netcoreapp2.1\PagesUI.runtimeconfig.dev.json
 C:\Users\Patrick\Desktop\MASSlabactivity\PagesUI\PagesUI\bin\Debug\netcoreapp2.1\PagesUI.dll
+C:\Users\Patrick\Desktop\MASSlabactivity\PagesUI\PagesUI\bin\Debug\netcoreapp2.1\PagesUI.pdb
+C:\Users\Patrick\Desktop\MASSlabactivity\PagesUI\PagesUI\bin\Debug\netcoreapp2.1\PagesUI.Views.dll
+C:\Users\Patrick\Desktop\MASSlabactivity\PagesUI\PagesUI\bin\Debug\netcoreapp2.1\PagesUI.Views.pdb
 C:\Users\Patrick\Desktop\MASSlabactivity\PagesUI\PagesUI\obj\Debug\netcoreapp2.1\PagesUI.RazorAssemblyInfo.cache
 C:\Users\Patrick\Desktop\MASSlabactivity\PagesUI\PagesUI\obj\Debug\netcoreapp2.1\PagesUI.RazorAssemblyInfo.cs
 C:\Users\Patrick\Desktop\MASSlabactivity\PagesUI\PagesUI\obj\Debug\netcoreapp2.1\PagesUI.AssemblyInfoInputs.cache
@@ -12,10 +15,6 @@ C:\Users\Patrick\Desktop\MASSlabactivity\PagesUI\PagesUI\obj\Debug\netcoreapp2.1
 C:\Users\Patrick\Desktop\MASSlabactivity\PagesUI\PagesUI\obj\Debug\netcoreapp2.1\PagesUI.TagHelpers.input.cache
 C:\Users\Patrick\Desktop\MASSlabactivity\PagesUI\PagesUI\obj\Debug\netcoreapp2.1\PagesUI.TagHelpers.output.cache
 C:\Users\Patrick\Desktop\MASSlabactivity\PagesUI\PagesUI\obj\Debug\netcoreapp2.1\PagesUI.RazorCoreGenerate.cache
-C:\Users\Patrick\Desktop\MASSlabactivity\PagesUI\PagesUI\obj\Debug\netcoreapp2.1\Razor\Views\Home\About.cshtml.g.cs
-C:\Users\Patrick\Desktop\MASSlabactivity\PagesUI\PagesUI\obj\Debug\netcoreapp2.1\Razor\Views\Home\Contact.cshtml.g.cs
-C:\Users\Patrick\Desktop\MASSlabactivity\PagesUI\PagesUI\obj\Debug\netcoreapp2.1\Razor\Views\Home\Index.cshtml.g.cs
-C:\Users\Patrick\Desktop\MASSlabactivity\PagesUI\PagesUI\obj\Debug\netcoreapp2.1\Razor\Views\Home\Privacy.cshtml.g.cs
 C:\Users\Patrick\Desktop\MASSlabactivity\PagesUI\PagesUI\obj\Debug\netcoreapp2.1\Razor\Views\Shared\Error.cshtml.g.cs
 C:\Users\Patrick\Desktop\MASSlabactivity\PagesUI\PagesUI\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_CookieConsentPartial.cshtml.g.cs
 C:\Users\Patrick\Desktop\MASSlabactivity\PagesUI\PagesUI\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_Layout.cshtml.g.cs
@@ -24,12 +23,10 @@ C:\Users\Patrick\Desktop\MASSlabactivity\PagesUI\PagesUI\obj\Debug\netcoreapp2.1
 C:\Users\Patrick\Desktop\MASSlabactivity\PagesUI\PagesUI\obj\Debug\netcoreapp2.1\Razor\Views\_ViewStart.cshtml.g.cs
 C:\Users\Patrick\Desktop\MASSlabactivity\PagesUI\PagesUI\obj\Debug\netcoreapp2.1\PagesUI.RazorTargetAssemblyInfo.cache
 C:\Users\Patrick\Desktop\MASSlabactivity\PagesUI\PagesUI\obj\Debug\netcoreapp2.1\PagesUI.RazorTargetAssemblyInfo.cs
-C:\Users\Patrick\Desktop\MASSlabactivity\PagesUI\PagesUI\bin\Debug\netcoreapp2.1\PagesUI.pdb
-C:\Users\Patrick\Desktop\MASSlabactivity\PagesUI\PagesUI\bin\Debug\netcoreapp2.1\PagesUI.Views.dll
-C:\Users\Patrick\Desktop\MASSlabactivity\PagesUI\PagesUI\bin\Debug\netcoreapp2.1\PagesUI.Views.pdb
 C:\Users\Patrick\Desktop\MASSlabactivity\PagesUI\PagesUI\obj\Debug\netcoreapp2.1\PagesUI.Views.pdb
 C:\Users\Patrick\Desktop\MASSlabactivity\PagesUI\PagesUI\obj\Debug\netcoreapp2.1\PagesUI.dll
 C:\Users\Patrick\Desktop\MASSlabactivity\PagesUI\PagesUI\obj\Debug\netcoreapp2.1\PagesUI.pdb
 C:\Users\Patrick\Desktop\MASSlabactivity\PagesUI\PagesUI\obj\Debug\netcoreapp2.1\PagesUI.csproj.CopyComplete
 C:\Users\Patrick\Desktop\MASSlabactivity\PagesUI\PagesUI\obj\Debug\netcoreapp2.1\Razor\Views\Account\Index.cshtml.g.cs
 C:\Users\Patrick\Desktop\MASSlabactivity\PagesUI\PagesUI\obj\Debug\netcoreapp2.1\Razor\Views\Account\Weather.cshtml.g.cs
+C:\Users\Patrick\Desktop\MASSlabactivity\PagesUI\PagesUI\obj\Debug\netcoreapp2.1\PagesUI.csprojAssemblyReference.cache
