@@ -5,6 +5,37 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Include="wwwroot\pages\fonts\montserrat\montserrat-bold-webfont.svg" />
+    <None Include="wwwroot\pages\fonts\montserrat\montserrat-regular-webfont.svg" />
+    <None Include="wwwroot\pages\fonts\pages-icon\Pages-icon.svg" />
+    <None Include="wwwroot\pages\img\progress\progress-bar-complete.svg" />
+    <None Include="wwwroot\pages\img\progress\progress-bar-danger.svg" />
+    <None Include="wwwroot\pages\img\progress\progress-bar-info.svg" />
+    <None Include="wwwroot\pages\img\progress\progress-bar-master.svg" />
+    <None Include="wwwroot\pages\img\progress\progress-bar-primary.svg" />
+    <None Include="wwwroot\pages\img\progress\progress-bar-success.svg" />
+    <None Include="wwwroot\pages\img\progress\progress-bar-warning.svg" />
+    <None Include="wwwroot\pages\img\progress\progress-circle-complete.svg" />
+    <None Include="wwwroot\pages\img\progress\progress-circle-danger.svg" />
+    <None Include="wwwroot\pages\img\progress\progress-circle-info.svg" />
+    <None Include="wwwroot\pages\img\progress\progress-circle-lg-master-static.svg" />
+    <None Include="wwwroot\pages\img\progress\progress-circle-lg-master.svg" />
+    <None Include="wwwroot\pages\img\progress\progress-circle-lg-white-static.svg" />
+    <None Include="wwwroot\pages\img\progress\progress-circle-lg-white.svg" />
+    <None Include="wwwroot\pages\img\progress\progress-circle-master.svg" />
+    <None Include="wwwroot\pages\img\progress\progress-circle-primary.svg" />
+    <None Include="wwwroot\pages\img\progress\progress-circle-success.svg" />
+    <None Include="wwwroot\pages\img\progress\progress-circle-warning.svg" />
+    <None Include="wwwroot\pages\js\pages.calendar.js" />
+    <None Include="wwwroot\pages\js\pages.calendar.min.js" />
+    <None Include="wwwroot\pages\js\pages.email.js" />
+    <None Include="wwwroot\pages\js\pages.js" />
+    <None Include="wwwroot\pages\js\pages.min.js" />
+    <None Include="wwwroot\pages\js\pages.social.js" />
+    <None Include="wwwroot\pages\js\pages.social.min.js" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.App" />
     <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.1.1" PrivateAssets="All" />
     <PackageReference Include="Microsoft.TypeScript.MSBuild" Version="3.7.4">

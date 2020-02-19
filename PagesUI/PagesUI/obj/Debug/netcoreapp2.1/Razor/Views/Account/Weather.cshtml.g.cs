@@ -54,7 +54,7 @@ using PagesUI.Models;
             WriteLiteral("<!DOCTYPE html>\r\n<html>\r\n");
             EndContext();
             BeginContext(25, 1243, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("head", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "08d444f9d4bc4f21b4a2d63c5f5d3b74", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("head", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "c52e781244694a9dbcf553d42dae965b", async() => {
                 BeginContext(31, 1230, true);
                 WriteLiteral(@"
     <script src=""https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js""></script>
@@ -90,7 +90,7 @@ using PagesUI.Models;
             WriteLiteral("\r\n");
             EndContext();
             BeginContext(1270, 418, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "1e9c8403c0b14341b265ad09f3e8c183", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "d0ba3f27581c4bae992b66a7f35ee21c", async() => {
                 BeginContext(1276, 405, true);
                 WriteLiteral(@"
 
