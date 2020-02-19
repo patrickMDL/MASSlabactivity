@@ -9,7 +9,11 @@ namespace PagesUI.Controllers
     public class AccountController : Controller
     {
 
-
+        [ResponseCache(Location = ResponseCacheLocation.None, NoStore = true)]
+        public IActionResult Weather()
+        {
+            return View();
+        }
         public IActionResult Index()
         {
             return View();
