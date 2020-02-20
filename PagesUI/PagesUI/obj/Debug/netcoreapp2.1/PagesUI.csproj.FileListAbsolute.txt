@@ -29,3 +29,4 @@ C:\Users\Patrick\Desktop\MASSlabactivity\PagesUI\PagesUI\obj\Debug\netcoreapp2.1
 C:\Users\Patrick\Desktop\MASSlabactivity\PagesUI\PagesUI\obj\Debug\netcoreapp2.1\PagesUI.csproj.CopyComplete
 C:\Users\Patrick\Desktop\MASSlabactivity\PagesUI\PagesUI\obj\Debug\netcoreapp2.1\Razor\Views\Account\Index.cshtml.g.cs
 C:\Users\Patrick\Desktop\MASSlabactivity\PagesUI\PagesUI\obj\Debug\netcoreapp2.1\Razor\Views\Account\Weather.cshtml.g.cs
+C:\Users\Patrick\Desktop\MASSlabactivity\PagesUI\PagesUI\obj\Debug\netcoreapp2.1\PagesUI.csprojAssemblyReference.cache
