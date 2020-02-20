@@ -87,8 +87,9 @@
                         var humidity = $("#humidity");
                         var precipitation = $("#precipitation");
                         var visibility = $("#visibility");
+                        var refresh = $("#refresh");
 
-
+                        refresh.html("");
                         currentLocation.html("");
                         currentTemp.html("");
                         localTime.html("");
@@ -96,7 +97,8 @@
                         humidity.html("");
                         precipitation.html("");
                         visibility.html("");
-                        
+
+                        refresh.append("Update");
                         currentLocation.append(data.location.name + ", " + data.location.country);
                         localTime.append(data.location.localtime);
                         currentTemp.append(data.current.temp_c + '° C');
@@ -132,7 +134,7 @@
                                     <div class="card-controls">
                                         <ul>
                                             <li>
-                                                <button id="refresh" class="btn btn-danger btn-cons">Update</button>
+                                                <button id="refresh" class="btn btn-danger btn-cons">Load</button>
                                             </li>
                                         </ul>
                                     </div>
