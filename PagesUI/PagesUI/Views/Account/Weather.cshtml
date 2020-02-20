@@ -88,7 +88,7 @@
                         var precipitation = $("#precipitation");
                         var visibility = $("#visibility");
 
-                        conditions = data.current.conditions;
+
                         currentLocation.html("");
                         currentTemp.html("");
                         localTime.html("");
@@ -99,11 +99,11 @@
                         
                         currentLocation.append(data.location.name + "," + data.location.country);
                         localTime.append(data.location.localtime);
-                        currentTemp.append(data.current.temp_c + '°');
-                        wind_speed.append(data.current.wind_kph + 'KM/H');
+                        currentTemp.append(data.current.temp_c + '° C');
+                        wind_speed.append(data.current.wind_kph + ' KM/H');
                         humidity.append(data.current.humidity + '%');
-                        precipitation.append(data.current.precip_mm + 'mm');
-                        visibility.append(data.current.vis_km + 'KM');
+                        precipitation.append(data.current.precip_mm + ' MM');
+                        visibility.append(data.current.vis_km + ' KM');
 
                     }).error(function (e) {
                         $("#weather").append('Sorry! Not Loaded');
@@ -146,7 +146,8 @@
                                                         <h4 id="localtime" class="no-margin">--</h4>
                                                     </div>
                                                     <div class="col-lg-7">
-                                                        <div id="conditionIcon" class="d-flex pull-right">
+                                                        <div class="d-flex pull-right">
+                                                            <div id="conditionIcon"></div>
                                                             
                                                             <h2 id="currentTemp" class="text-danger bold no-margin p-l-10"> --
                                                             </h2>
@@ -178,7 +179,6 @@
                                                                     <p id="sunrise" class="pull-right no-margin fs-13">--</p>
                                                                 </div>
                                                             </div>
-
                                                         </div>
                                                         <div class="col-6 p-l-15">
                                                             <div class="row">

@@ -72,7 +72,7 @@ using PagesUI.Models;
             WriteLiteral("\r\n<!DOCTYPE html>\r\n<html>\r\n");
             EndContext();
             BeginContext(184, 2489, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("head", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "d03027be79bd4b09b5456e21cbcd3262", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("head", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "0a0d2db32fe44c6da5e28da563eadb37", async() => {
                 BeginContext(190, 2476, true);
                 WriteLiteral(@"
     <meta http-equiv=""content-type"" content=""text/html;charset=UTF-8"" />
@@ -128,7 +128,7 @@ using PagesUI.Models;
             WriteLiteral("\r\n");
             EndContext();
             BeginContext(2675, 18251, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "ee063745259844a192b7a78d67a9e5fb", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "8da680a02fe746369b65aac4e2471914", async() => {
                 BeginContext(2703, 1079, true);
                 WriteLiteral(@"
     <div class=""login-wrapper "">
@@ -155,7 +155,7 @@ using PagesUI.Models;
                 WriteLiteral("semi-bold\">Login e Senha</span></p>\r\n\r\n                ");
                 EndContext();
                 BeginContext(3782, 2690, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "be14979cbf3f413dabecca03666fc38b", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "9d2c1c66d3504644bb2ec25b839ad4d7", async() => {
                     BeginContext(3889, 2576, true);
                     WriteLiteral(@"
 
