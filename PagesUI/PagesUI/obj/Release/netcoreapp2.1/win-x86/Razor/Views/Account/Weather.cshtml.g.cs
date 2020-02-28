@@ -107,7 +107,7 @@ using PagesUI.Models;
 ");
             EndContext();
             BeginContext(1673, 4057, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("head", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "58762637fc274b4f98df39bf04cdc739", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("head", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "eafaddecb8ce4696b11e57b501e441ba", async() => {
                 BeginContext(1679, 4044, true);
                 WriteLiteral(@"
     <meta http-equiv=""content-type"" content=""text/html;charset=UTF-8"" />
@@ -196,7 +196,7 @@ using PagesUI.Models;
             WriteLiteral("\n");
             EndContext();
             BeginContext(5731, 8856, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "f5b833042ed94137886b83b9913793c2", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "fd8b121356404b8b8ff9fa8da4a761de", async() => {
                 BeginContext(5768, 8812, true);
                 WriteLiteral(@"
     <div class=""page-container "">

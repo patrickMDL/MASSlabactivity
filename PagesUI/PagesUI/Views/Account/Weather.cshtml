@@ -1,53 +1,4 @@
-﻿<!--<!DOCTYPE html>
-<html>
-<head>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script>
-        $(document).ready(function () {
-            $("#bntLocation").click(function () {
-                navigator.geolocation.getCurrentPosition(function (position) {
-                    var weatherAPI = "https://api.weatherapi.com/v1/current.json?key=5b34aa6378dd4d889bf142611201002&q=" + position.coords.latitude + "," + position.coords.longitude;
-
-                    $.getJSON(weatherAPI, function (data) {
-                        var forecast = data.current.temp_c;
-                        var wind_speed = data.current.wind_kph;
-                        var weather = $("#weather");
-                        var location = data.location.name;
-                        var conditions = data.current.conditions;
-                        weather.append('Temperature:' + forecast + '° C <br/>' + 'Wind Speed:' + wind_speed + ' KM/H' + '<br/>' + 'City: ' + location + ' <br/>');
-
-                    }).error(function (e) {
-                        $("#weather").append('Sorry! Not Loaded');
-                    });
-                })
-            });
-        });
-    </script>
-</head>
-<body>
-
-
-
-    <div class="card card-default card-condensed text-black">
-        <div class="card-header">
-            <div class="card-title">
-                Basic Cards
-            </div>
-        </div>
-        <div class="card-block">
-            <p id="weather"></p>
-        </div>
-    </div>
-    <button id="bntLocation" class="btn btn-primary btn-cons">
-        Weather
-    </button>
-
-
-</body>
-</html>
-    -->
-
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
@@ -76,48 +27,72 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script>
         $(document).ready(function () {
-            $("#refresh").click(function () {
-                navigator.geolocation.getCurrentPosition(function (position) {
-                    var weatherAPI = "https://api.weatherapi.com/v1/forecast.json?key=5b34aa6378dd4d889bf142611201002&q=" + position.coords.latitude + "," + position.coords.longitude + "&days=1" ;
-                    $.getJSON(weatherAPI, function (data) {
-                        var currentLocation = $("#currentLocation");
-                        var currentTemp = $("#currentTemp");
-                        var localTime = $("#localtime");
-                        var wind_speed = $("#windSpeed");
-                        var humidity = $("#humidity");
-                        var precipitation = $("#precipitation");
-                        var visibility = $("#visibility");
-                        var refresh = $("#refresh");
+            navigator.geolocation.getCurrentPosition(function (position) {
+                var weatherAPI = "https://api.weatherapi.com/v1/forecast.json?key=5b34aa6378dd4d889bf142611201002&q=" + position.coords.latitude + "," + position.coords.longitude + "&days=7";
+                $.getJSON(weatherAPI, function (data) {
+                    var currentLocation = $("#currentLocation");
+                    var currentTemp = $("#currentTemp");
+                    var localTime = $("#localtime");
+                    var wind_speed = $("#windSpeed");
+                    var humidity = $("#humidity");
+                    var precipitation = $("#precipitation");
+                    var visibility = $("#visibility");
+                    var refresh = $("#refresh");
+                    var conditionIcon = $("#conditionIcon");
+                    var sunset = $("#sunset");
+                    var sunrise = $("#sunrise");
 
-                        refresh.html("");
-                        currentLocation.html("");
-                        currentTemp.html("");
-                        localTime.html("");
-                        wind_speed.html("");
-                        humidity.html("");
-                        precipitation.html("");
-                        visibility.html("");
+                    sunrise.html("");
+                    sunset.html("");
 
-                        refresh.append("Update");
-                        currentLocation.append(data.location.name + ", " + data.location.country);
-                        localTime.append(data.location.localtime);
-                        currentTemp.append(data.current.temp_c + '° C');
-                        wind_speed.append(data.current.wind_kph + ' KM/H');
-                        humidity.append(data.current.humidity + '%');
-                        precipitation.append(data.current.precip_mm + ' MM');
-                        visibility.append(data.current.vis_km + ' KM');
+                    currentLocation.html("");
+                    currentTemp.html("");
+                    localTime.html("");
+                    wind_speed.html("");
+                    humidity.html("");
+                    precipitation.html("");
+                    visibility.html("");
+                    conditionIcon.html("");
+                    $("#conditionIcon").append('<img src="' + data.current.condition.icon + '"/>');
 
-                    }).error(function (e) {
-                        $("#weather").append('Sorry! Not Loaded');
-                    });
-                })
+
+
+                    currentLocation.append(data.location.name + ", " + data.location.country);
+                    localTime.append(data.location.localtime);
+                    currentTemp.append(data.current.temp_c + '° C');
+                    wind_speed.append(data.current.wind_kph + ' KM/H');
+                    humidity.append(data.current.humidity + '%');
+                    precipitation.append(data.current.precip_mm + ' MM');
+                    visibility.append(data.current.vis_km + ' KM');
+                    sunset.append(data.forecast.forecastday[0].astro.sunset);
+                    sunrise.append(data.forecast.forecastday[0].astro.sunrise);
+                    $("#day1date").html(data.forecast.forecastday[1].date + '<br/>' + '<img src="' + data.forecast.forecastday[1].day.condition.icon + '"/>');
+                    $("#day1temp").html(data.forecast.forecastday[1].day.avgtemp_c + '° C');
+                    $("#day2date").html(data.forecast.forecastday[2].date + '<br/>' + '<img src="' + data.forecast.forecastday[2].day.condition.icon + '"/>');
+                    $("#day2temp").html(data.forecast.forecastday[2].day.avgtemp_c + '° C');
+                    $("#day3date").html(data.forecast.forecastday[3].date + '<br/>' + '<img src="' + data.forecast.forecastday[3].day.condition.icon + '"/>');
+                    $("#day3temp").html(data.forecast.forecastday[3].day.avgtemp_c + '° C');
+                    $("#day4date").html(data.forecast.forecastday[4].date + '<br/>' + '<img src="' + data.forecast.forecastday[4].day.condition.icon + '"/>');
+                    $("#day4temp").html(data.forecast.forecastday[4].day.avgtemp_c + '° C');
+                    $("#day5date").html(data.forecast.forecastday[5].date + '<br/>' + '<img src="' + data.forecast.forecastday[5].day.condition.icon + '"/>');
+                    $("#day5temp").html(data.forecast.forecastday[5].day.avgtemp_c + '° C');
+                    $("#day6date").html(data.forecast.forecastday[6].date + '<br/>' + '<img src="' + data.forecast.forecastday[6].day.condition.icon + '"/>');
+                    $("#day6temp").html(data.forecast.forecastday[6].day.avgtemp_c + '° C');
+
+                }).error(function (e) {
+                    $("#weather").append('Sorry! Not Loaded');
+                });
             });
-
         });
     </script>
 </head>
 <body class="fixed-header dashboard">
     <div class="page-container ">
+        <div class="header">
+            <div class="brand inline   ">
+                <img src="../img/logo.png" alt="logo" data-src="../img/logo.png" data-src-retina="../img/logo.png">
+            </div>
+        </div>
         <div class="page-content-wrapper ">
             <div class="content sm-gutter">
                 <div class="container-fluid padding-25 sm-padding-10">
@@ -127,13 +102,16 @@
                             <div class="widget-17 card  no-border no-margin widget-loader-circle">
                                 <div class="card-header ">
                                     <div class="card-title">
-                                        <p id="currentLocation">--</p> 
+
+                                        <p id="currentLocation">--</p>
                                         <span class="caret"></span>
                                     </div>
                                     <div class="card-controls">
                                         <ul>
                                             <li>
-                                                <button id="refresh" class="btn btn-danger btn-cons">Load</button>
+                                                <a id="refresh" data-toggle="refresh" class="card-refresh text-black" href="#">
+                                                    <i class="card-icon card-icon-refresh"></i>
+                                                </a>
                                             </li>
                                         </ul>
                                     </div>
@@ -144,19 +122,20 @@
                                             <div class="col-lg-12 col-xlg-6">
                                                 <div class="row m-t-10">
                                                     <div class="col-lg-5">
-                                                        <h4 id="localtime" class="no-margin">--</h4>
+
+                                                        <h4 id="localtime" class=" no-margin">--</h4>
                                                     </div>
                                                     <div class="col-lg-7">
                                                         <div class="d-flex pull-right">
                                                             <div id="conditionIcon"></div>
-                                                            
-                                                            <h2 id="currentTemp" class="text-danger bold no-margin p-l-10"> --
+                                                            <h2 id="currentTemp" class="text-danger bold no-margin p-l-10">
+                                                                --
                                                             </h2>
                                                         </div>
                                                     </div>
                                                 </div>
                                                 <div class="m-t-25 p-b-10">
-                                                    <p class="pull-left no-margin hint-text">Weather information</p>
+                                                    <p class="pull-left no-margin hint-text">Clima atual</p>
                                                     <div class="clearfix"></div>
                                                 </div>
                                                 <div class="widget-17-weather b-t b-grey p-t-20">
@@ -164,19 +143,19 @@
                                                         <div class="col-6 p-r-15">
                                                             <div class="row">
                                                                 <div class="col-lg-12">
-                                                                    <p class="pull-left no-margin hint-text fs-13">Wind</p>
+                                                                    <p class="pull-left no-margin hint-text fs-13">Vento</p>
                                                                     <p id="windSpeed" class="pull-right no-margin fs-13">--</p>
                                                                 </div>
                                                             </div>
                                                             <div class="row">
                                                                 <div class="col-lg-12">
-                                                                    <p class="pull-left no-margin hint-text fs-13">Humidity</p>
+                                                                    <p class="pull-left no-margin hint-text fs-13">Humidade</p>
                                                                     <p id="humidity" class="pull-right no-margin fs-13">--</p>
                                                                 </div>
                                                             </div>
                                                             <div class="row">
                                                                 <div class="col-lg-12">
-                                                                    <p class="pull-left no-margin hint-text fs-13">Sunrise</p>
+                                                                    <p class="pull-left no-margin hint-text fs-13">Nascer do Sol</p>
                                                                     <p id="sunrise" class="pull-right no-margin fs-13">--</p>
                                                                 </div>
                                                             </div>
@@ -184,23 +163,49 @@
                                                         <div class="col-6 p-l-15">
                                                             <div class="row">
                                                                 <div class="col-lg-12">
-                                                                    <p class="pull-left no-margin hint-text fs-13">Precipitation</p>
+                                                                    <p class="pull-left no-margin hint-text fs-13">Precipitação</p>
                                                                     <p id="precipitation" class="pull-right no-margin fs-13">--</p>
                                                                 </div>
                                                             </div>
                                                             <div class="row">
                                                                 <div class="col-lg-12">
-                                                                    <p class="pull-left no-margin hint-text fs-13">Visibility</p>
+                                                                    <p class="pull-left no-margin hint-text fs-13">Visibilidade</p>
                                                                     <p id="visibility" class="pull-right no-margin fs-13">--</p>
                                                                 </div>
                                                             </div>
                                                             <div class="row">
                                                                 <div class="col-lg-12">
-                                                                    <p class="pull-left no-margin hint-text fs-13">Sunset</p>
-                                                                    <p class="pull-right no-margin fs-13">--</p>
+                                                                    <p class="pull-left no-margin hint-text fs-13">Pôr do Sol</p>
+                                                                    <p id="sunset" class="pull-right no-margin fs-13">--</p>
                                                                 </div>
                                                             </div>
                                                         </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row m-t-20 timeslot">
+                                                    <div class="col-2 p-t-10 text-center b-r b-dashed b-grey">
+                                                        <p id="day1date"class="small">--</p>
+                                                        <p id="day1temp" class="text-success bold">--</p>
+                                                    </div>
+                                                    <div class="col-2 p-t-10 text-center b-r b-dashed b-grey">
+                                                        <p id="day2date" class="small">--</p>
+                                                        <p id="day2temp" class="text-success bold">--</p>
+                                                    </div>
+                                                    <div class="col-2 p-t-10 text-center b-r b-dashed b-grey">
+                                                        <p id="day3date" class="small">--</p>
+                                                        <p id="day3temp" class="text-success bold">--</p>
+                                                    </div>
+                                                    <div class="col-2 p-t-10 text-center b-r b-dashed b-grey">
+                                                        <p id="day4date" class="small">--</p>
+                                                        <p id="day4temp" class="text-success bold">--</p>
+                                                    </div>
+                                                    <div class="col-2 p-t-10 text-center b-r b-dashed b-grey">
+                                                        <p id="day5date"class="small">--</p>
+                                                        <p id="day5temp"class="text-success bold">--</p>
+                                                    </div>
+                                                    <div class="col-2 p-t-10 text-center">
+                                                        <p id="day6date" class="small">--</p>
+                                                        <p id="day6temp" class="text-success bold">--</p>
                                                     </div>
                                                 </div>
                                             </div>
@@ -212,18 +217,17 @@
                     </div>
                 </div>
             </div>
-            <div class=" container-fluid  container-fixed-lg footer">
-                <div class="copyright sm-text-center">
-                    <p class="small">
-                        Copyright &copy; 2020 <b><a href="http://portal.mass.com.br">MASS Labs</a></b>. Todos os Direitos Reservados.
-                    </p>
-                    
-                    <div class="clearfix"></div>
-                </div>
+        </div>  
+
+        <div class=" container-fluid   footer">
+            <div class="copyright sm-text-center">
+                <p class="small">
+                      Copyright &copy; 2020 <b><a href="http://portal.mass.com.br">MASS Labs</a></b>. Todos os Direitos Reservados.
+                </p>
+
+                <div class="clearfix"></div>
             </div>
-
         </div>
-
     </div>
 
     <script src="../plugins/pace/pace.min.js" type="text/javascript"></script>
@@ -242,5 +246,67 @@
     <script src="../plugins/switchery/js/switchery.min.js" type="text/javascript"></script>
     <script src="../plugins/jquery-validation/js/jquery.validate.min.js" type="text/javascript"></script>
     <script src="../pages/js/pages.min.js"></script>
+    <script>
+        var myVar = setInterval(myTimer, 1800000);
+            function myTimer() {
+                navigator.geolocation.getCurrentPosition(function (position) {
+                    var weatherAPI = "https://api.weatherapi.com/v1/forecast.json?key=5b34aa6378dd4d889bf142611201002&q=" + position.coords.latitude + "," + position.coords.longitude + "&days=7";
+                    $.getJSON(weatherAPI, function (data) {
+                        var currentLocation = $("#currentLocation");
+                        var currentTemp = $("#currentTemp");
+                        var localTime = $("#localtime");
+                        var wind_speed = $("#windSpeed");
+                        var humidity = $("#humidity");
+                        var precipitation = $("#precipitation");
+                        var visibility = $("#visibility");
+                        var refresh = $("#refresh");
+                        var conditionIcon = $("#conditionIcon");
+                        var sunset = $("#sunset");
+                        var sunrise = $("#sunrise");
+
+                        sunrise.html("");
+                        sunset.html("");
+                        conditionIcon.html("");
+
+                        currentLocation.html("");
+                        currentTemp.html("");
+                        localTime.html("");
+                        wind_speed.html("");
+                        humidity.html("");
+                        precipitation.html("");
+                        visibility.html("");
+
+
+                        currentLocation.append(data.location.name + ", " + data.location.country);
+                        localTime.append(data.location.localtime);
+                        currentTemp.append(data.current.temp_c + '° C');
+                        wind_speed.append(data.current.wind_kph + ' KM/H');
+                        humidity.append(data.current.humidity + '%');
+                        precipitation.append(data.current.precip_mm + ' MM');
+                        visibility.append(data.current.vis_km + ' KM');
+                        sunset.append(data.forecast.forecastday[0].astro.sunset);
+                        sunrise.append(data.forecast.forecastday[0].astro.sunrise);
+                        $("#conditionIcon").append('<img src="' + data.current.condition.icon + '"/>');
+                        $("#day1date").html(data.forecast.forecastday[1].date + '<br/>' + '<img src="' + data.forecast.forecastday[1].day.condition.icon + '"/>');
+                        $("#day1temp").html(data.forecast.forecastday[1].day.avgtemp_c + '° C');
+                        $("#day2date").html(data.forecast.forecastday[2].date + '<br/>' + '<img src="' + data.forecast.forecastday[2].day.condition.icon + '"/>');
+                        $("#day2temp").html(data.forecast.forecastday[2].day.avgtemp_c + '° C');
+                        $("#day3date").html(data.forecast.forecastday[3].date + '<br/>' + '<img src="' + data.forecast.forecastday[3].day.condition.icon + '"/>');
+                        $("#day3temp").html(data.forecast.forecastday[3].day.avgtemp_c + '° C');
+                        $("#day4date").html(data.forecast.forecastday[4].date + '<br/>' + '<img src="' + data.forecast.forecastday[4].day.condition.icon + '"/>');
+                        $("#day4temp").html(data.forecast.forecastday[4].day.avgtemp_c + '° C');
+                        $("#day5date").html(data.forecast.forecastday[5].date + '<br/>' + '<img src="' + data.forecast.forecastday[5].day.condition.icon + '"/>');
+                        $("#day5temp").html(data.forecast.forecastday[5].day.avgtemp_c + '° C');
+                        $("#day6date").html(data.forecast.forecastday[6].date + '<br/>' + '<img src="' + data.forecast.forecastday[6].day.condition.icon + '"/>');
+                        $("#day6temp").html(data.forecast.forecastday[6].day.avgtemp_c + '° C');
+
+
+                    }).error(function (e) {
+                        $("#weather").append('Sorry! Not Loaded');
+                    });
+                });
+            }
+            $("#refresh").click(myTimer);
+    </script>
 </body>
 </html>
