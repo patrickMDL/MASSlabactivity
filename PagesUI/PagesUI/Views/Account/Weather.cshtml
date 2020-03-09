@@ -83,10 +83,94 @@
                     $("#weather").append('Sorry! Not Loaded');
                 });
             });
+            var timer2 = "30:00";
+            var interval = setInterval(function () {
+
+                var timer = timer2.split(':');
+                //by parsing integer, I avoid all extra string processing
+                var minutes = parseInt(timer[0], 10);
+                var seconds = parseInt(timer[1], 10);
+                --seconds;
+                minutes = (seconds < 0) ? --minutes : minutes;
+                if (minutes < 0) clearInterval(interval);
+                seconds = (seconds < 0) ? 59 : seconds;
+                seconds = (seconds < 10) ? '0' + seconds : seconds;
+                //minutes = (minutes < 10) ?  minutes : minutes;
+                $('#countdown').html(minutes + ':' + seconds);
+                timer2 = minutes + ':' + seconds;
+            }, 1000);
         });
     </script>
 </head>
 <body class="fixed-header dashboard">
+    <nav class="page-sidebar" data-pages="sidebar" style="transform: translate3d(0px, 0px, 0px);">
+
+        <div class="sidebar-overlay-slide from-top" id="appMenu">
+            <div class="row">
+                <div class="col-xs-6 no-padding">
+                    <a href="#" class="p-l-40">
+                        <img src="../condensed/assets/img/demo/social_app.svg" alt="socail">
+                    </a>
+                </div>
+                <div class="col-xs-6 no-padding">
+                    <a href="#" class="p-l-10">
+                        <img src="../condensed/assets/img/demo/email_app.svg" alt="socail">
+                    </a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-6 m-t-20 no-padding">
+                    <a href="#" class="p-l-40">
+                        <img src="../condensed/assets/img/demo/calendar_app.svg" alt="socail">
+                    </a>
+                </div>
+                <div class="col-xs-6 m-t-20 no-padding">
+                    <a href="#" class="p-l-10">
+                        <img src="../condensed/assets/img/demo/add_more.svg" alt="socail">
+                    </a>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="sidebar-header">
+            <img src="../img/logo_white.png" alt="logo" class="brand" data-src="../img/logo_white.png" data-src-retina="../img/logo_white_2x.png" width="78" height="22">
+            <div class="sidebar-header-controls">
+                <button aria-label="Toggle Drawer" type="button" class="btn btn-icon-link invert sidebar-slide-toggle m-l-20 m-r-10" data-pages-toggle="#appMenu">
+                    
+                </button>
+                <button aria-label="Pin Menu" type="button" class="btn btn-icon-link invert d-lg-inline-block d-xlg-inline-block d-md-inline-block d-sm-none d-none" data-toggle-pin="sidebar">
+                    <i class="fa fa-chevron-right"></i>
+                </button>
+            </div>
+        </div>
+
+
+        <div class="sidebar-menu">
+            <div class="scroll-wrapper menu-items" style="position: relative;">
+                <ul class="menu-items scroll-content" style="height: 883px; margin-bottom: 0px; margin-right: 0px; max-height: none;">
+                    <li class="m-t-20">
+                        <a href="../Account/Weather" class="detailed">
+                            <span class="title">Weather</span>
+                        </a>
+                        <span class="icon-thumbnail"><i class="fa fa-home"></i></span>
+                    </li>
+                    <li class="">
+                        <a href="../Account/Heatmap" class="detailed">
+                            <span class="title">Heatmap</span>
+                        </a>
+                        <span class="icon-thumbnail"><i class="fa fa-map"></i></span>
+                    </li>
+                    <li class="">
+                        <a href="../Account/Tracking"><span class="title">Tracking</span></a>
+                        <span class="icon-thumbnail"><i class="fa fa-map-pin"></i></span>
+                    </li>
+                </ul><div class="scroll-element scroll-x" style=""><div class="scroll-element_outer"><div class="scroll-element_size"></div><div class="scroll-element_track"></div><div class="scroll-bar" style="width: 96px; left: 0px;"></div></div></div><div class="scroll-element scroll-y" style=""><div class="scroll-element_outer"><div class="scroll-element_size"></div><div class="scroll-element_track"></div><div class="scroll-bar" style="height: 96px;"></div></div></div>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+
+    </nav>
     <div class="page-container ">
         <div class="header">
             <div class="brand inline   ">
@@ -114,6 +198,7 @@
                                                 </a>
                                             </li>
                                         </ul>
+                                        <div id="countdown"></div>
                                     </div>
                                 </div>
                                 <div class="card-body">
@@ -149,7 +234,7 @@
                                                             </div>
                                                             <div class="row">
                                                                 <div class="col-lg-12">
-                                                                    <p class="pull-left no-margin hint-text fs-13">Humidade</p>
+                                                                    <p class="pull-left no-margin hint-text fs-13">Umidade</p>
                                                                     <p id="humidity" class="pull-right no-margin fs-13">--</p>
                                                                 </div>
                                                             </div>
@@ -248,7 +333,24 @@
     <script src="../pages/js/pages.min.js"></script>
     <script>
         var myVar = setInterval(myTimer, 1800000);
-            function myTimer() {
+        
+        function myTimer() {
+            var timer2 = "30:00";
+            var interval = setInterval(function () {
+
+                var timer = timer2.split(':');
+                //by parsing integer, I avoid all extra string processing
+                var minutes = parseInt(timer[0], 10);
+                var seconds = parseInt(timer[1], 10);
+                --seconds;
+                minutes = (seconds < 0) ? --minutes : minutes;
+                if (minutes < 0) clearInterval(interval);
+                seconds = (seconds < 0) ? 59 : seconds;
+                seconds = (seconds < 10) ? '0' + seconds : seconds;
+                //minutes = (minutes < 10) ?  minutes : minutes;
+                $('#countdown').html(minutes + ':' + seconds);
+                timer2 = minutes + ':' + seconds;
+            }, 1000);
                 navigator.geolocation.getCurrentPosition(function (position) {
                     var weatherAPI = "https://api.weatherapi.com/v1/forecast.json?key=5b34aa6378dd4d889bf142611201002&q=" + position.coords.latitude + "," + position.coords.longitude + "&days=7";
                     $.getJSON(weatherAPI, function (data) {

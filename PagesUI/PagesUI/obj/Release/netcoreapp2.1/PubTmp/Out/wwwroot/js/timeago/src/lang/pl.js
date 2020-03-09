@@ -30,5 +30,5 @@ export default function(number, index) {
   // to determine which plural form must be used check the last 2 digits
   // and calculate new index value to get the nominative form (14-20)
   // for all other cases use index value as it is (0-13)
-  return l[index&1?(number%10>4||number%10<2||1===~~(number/10)%10?index:++index/2+13):index];
+  return l[index&1?(number%10>4||number%10<2||1===....(number/10)%10?index:++index/2+13):index];
 };

@@ -127,7 +127,7 @@ var Notifications = function () {
                 position: e.attr("data-placement"), // Placement of the notification: top, bottom, top-left, top-right, bottom-left, bottom-right
                 timeout: 10000,
                 type: type, // info, warning, success, danger, default
-                //thumbnail: '<img width="40" height="40" style="display: inline-block;" src="assets/img/profiles/avatar2x.jpg" data-src="assets/img/profiles/avatar.jpg" data-src-retina="assets/img/profiles/avatar2x.jpg" alt="">'
+                //thumbnail: '<img width="40" height="40" style="display: inline-block;" src="../img/profiles/avatar2x.jpg" data-src="../img/profiles/avatar.jpg" data-src-retina="../img/profiles/avatar2x.jpg" alt="">'
                 thumbnail: pThumbnail
             }).show();
         },

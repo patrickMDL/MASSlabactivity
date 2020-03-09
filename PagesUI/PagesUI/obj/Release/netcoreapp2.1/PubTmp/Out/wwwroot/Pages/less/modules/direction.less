@@ -4,9 +4,9 @@
 
 // Local vars
 
-@rtl: ~`"@{direction}" === 'rtl' ? 'true' : 'false'`;
-@left: ~`@{rtl} ? 'right' : 'left'`;
-@right: ~`@{rtl} ? 'left' : 'right'`;
+@rtl: ..`"@{direction}" === 'rtl' ? 'true' : 'false'`;
+@left: ..`@{rtl} ? 'right' : 'left'`;
+@right: ..`@{rtl} ? 'left' : 'right'`;
 
 
 // "border-color:" rule

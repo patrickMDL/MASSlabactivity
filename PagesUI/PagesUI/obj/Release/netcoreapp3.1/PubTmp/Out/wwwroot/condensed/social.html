@@ -1,0 +1,23 @@
+{% set TITLE = "- Blank Page" %}
+{% set ASSETS = "assets" %}
+{% set ASSETS_PLUGINS = "assets/plugins" %}
+{% set PAGES_CORE = "pages" %}
+{% set THEME ="pages" %}
+{% set BODY_CLASS ="no-header" %}
+{% set active_parent = "social" %}
+{% extends PATH + "layouts/default_layout.html" %}
+{% block css_dependencies %}
+	<link href="assets/plugins/codrops-stepsform/css/component.css" rel="stylesheet" type="text/css" media="screen" />
+{% endblock %}
+  {% block page %}
+  {% include PATH + "pages/social/social.tpl"%}
+  {% endblock %}
+{% block page_js_dependencies %}
+    <script src="assets/plugins/imagesloaded/imagesloaded.pkgd.min.js"></script>
+    <script src="assets/plugins/jquery-isotope/isotope.pkgd.min.js" type="text/javascript"></script>
+    <script src="assets/plugins/classie/classie.js" type="text/javascript"></script>
+    <script src="assets/plugins/codrops-stepsform/js/stepsForm.js" type="text/javascript"></script>
+{% endblock %}
+{% block addition_core_pages_js %}
+<script src="pages/js/pages.social.min.js"></script>
+{% endblock %}

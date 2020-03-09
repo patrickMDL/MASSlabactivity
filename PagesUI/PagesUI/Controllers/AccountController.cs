@@ -14,24 +14,25 @@ namespace PagesUI.Controllers
         {
             return View();
         }
+        public IActionResult Heatmap()
+        {
+            return View();
+        }
         public IActionResult Index()
         {
             return View();
         }
-
+        public IActionResult Tracking()
+        {
+            return View();
+        }
         [HttpPost]
         public IActionResult Login(string username, string password)
         {
-            if (username != null && password != null)
-            {
+            
 
-                return View("/Weather");
-            }
-            else
-            {
-                ViewBag.error = "Invalid Account";
-                return View("Index");
-            }
+                return RedirectToAction("/Weather");
+            
         }
     }
 }

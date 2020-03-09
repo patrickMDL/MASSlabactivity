@@ -1,0 +1,32 @@
+{% set TITLE = "- Blank Page" %}
+{% set ASSETS = "assets" %}
+{% set ASSETS_PLUGINS = "assets/plugins" %}
+{% set PAGES_CORE = "pages" %}
+{% set THEME ="pages" %}
+{% set active_parent = "layouts" %}
+{% extends PATH + "layouts/default_layout.html" %}
+{% set BODY_CLASS = "rtl" %}
+{% block css_dependencies %}{% endblock %}
+  {% block page %}
+  <!-- START JUMBOTRON -->
+  <div class="jumbotron" data-pages="parallax">
+    <div class="container-fluid container-fixed-lg sm-p-l-0 sm-p-r-0">
+      <div class="inner">
+        <!-- START BREADCRUMB -->
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="#">Layouts</a></li>
+            <li class="breadcrumb-item active">RTL</li>
+        </ol>
+        <!-- END BREADCRUMB -->
+      </div>
+    </div>
+  </div>
+  <!-- END JUMBOTRON -->
+  <!-- START CONTAINER FLUID -->
+  <div class="container-fluid container-fixed-lg">
+    <!-- BEGIN PlACE PAGE CONTENT HERE -->
+    <!-- END PLACE PAGE CONTENT HERE -->
+  </div>
+  <!-- END CONTAINER FLUID -->
+  {% endblock %}
+{% block js_dependencies %}{% endblock %}

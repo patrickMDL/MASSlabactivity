@@ -1424,7 +1424,7 @@ body.menu-pin .overlay .overlay-brand {
   color: #cccfd4;
   opacity: 1;
 }
-.quickview-wrapper .nav-tabs ~ .tab-content {
+.quickview-wrapper .nav-tabs .. .tab-content {
   position: absolute;
   padding: 0;
   left: 0;
@@ -1433,51 +1433,51 @@ body.menu-pin .overlay .overlay-brand {
   bottom: 0;
   height: auto;
 }
-.quickview-wrapper .nav-tabs ~ .tab-content > div {
+.quickview-wrapper .nav-tabs .. .tab-content > div {
   height: 100%;
 }
-.quickview-wrapper .nav-tabs ~ .tab-content ul {
+.quickview-wrapper .nav-tabs .. .tab-content ul {
   margin: 0;
   padding: 0;
 }
-.quickview-wrapper .nav-tabs ~ .tab-content ul li {
+.quickview-wrapper .nav-tabs .. .tab-content ul li {
   list-style: none;
 }
-.quickview-wrapper .nav-tabs ~ .tab-content .quickview-notes {
+.quickview-wrapper .nav-tabs .. .tab-content .quickview-notes {
   /* Quickview Notes */
   background: #fbf9e3;
 }
-.quickview-wrapper .nav-tabs ~ .tab-content .quickview-notes a,
-.quickview-wrapper .nav-tabs ~ .tab-content .quickview-notes button {
+.quickview-wrapper .nav-tabs .. .tab-content .quickview-notes a,
+.quickview-wrapper .nav-tabs .. .tab-content .quickview-notes button {
   color: #968974;
 }
-.quickview-wrapper .nav-tabs ~ .tab-content .quickview-notes .list {
+.quickview-wrapper .nav-tabs .. .tab-content .quickview-notes .list {
   position: relative;
 }
-.quickview-wrapper .nav-tabs ~ .tab-content .quickview-notes .list .toolbar {
+.quickview-wrapper .nav-tabs .. .tab-content .quickview-notes .list .toolbar {
   height: 50px;
   padding: 0 25px;
 }
-.quickview-wrapper .nav-tabs ~ .tab-content .quickview-notes .list .toolbar ul {
+.quickview-wrapper .nav-tabs .. .tab-content .quickview-notes .list .toolbar ul {
   margin-top: 10px;
 }
-.quickview-wrapper .nav-tabs ~ .tab-content .quickview-notes .list .toolbar ul > li {
+.quickview-wrapper .nav-tabs .. .tab-content .quickview-notes .list .toolbar ul > li {
   display: inline-block;
   height: auto;
 }
-.quickview-wrapper .nav-tabs ~ .tab-content .quickview-notes .list .toolbar ul > li a {
+.quickview-wrapper .nav-tabs .. .tab-content .quickview-notes .list .toolbar ul > li a {
   height: 22px;
   line-height: 22px;
   display: block;
   padding: 0 5px;
   font-size: 14px;
 }
-.quickview-wrapper .nav-tabs ~ .tab-content .quickview-notes .list .toolbar ul > li a:hover,
-.quickview-wrapper .nav-tabs ~ .tab-content .quickview-notes .list .toolbar ul > li a.selected {
+.quickview-wrapper .nav-tabs .. .tab-content .quickview-notes .list .toolbar ul > li a:hover,
+.quickview-wrapper .nav-tabs .. .tab-content .quickview-notes .list .toolbar ul > li a.selected {
   background: #968974;
   color: #FBF9E3;
 }
-.quickview-wrapper .nav-tabs ~ .tab-content .quickview-notes .list .toolbar .btn-remove-notes {
+.quickview-wrapper .nav-tabs .. .tab-content .quickview-notes .list .toolbar .btn-remove-notes {
   background: transparent;
   bottom: 8px;
   display: block;
@@ -1487,31 +1487,31 @@ body.menu-pin .overlay .overlay-brand {
   width: 83%;
   border: 1px solid #968974;
 }
-.quickview-wrapper .nav-tabs ~ .tab-content .quickview-notes .list > ul {
+.quickview-wrapper .nav-tabs .. .tab-content .quickview-notes .list > ul {
   padding: 0;
 }
-.quickview-wrapper .nav-tabs ~ .tab-content .quickview-notes .list > ul li {
+.quickview-wrapper .nav-tabs .. .tab-content .quickview-notes .list > ul li {
   cursor: pointer;
   height: 42px;
   padding: 0 25px;
   display: block;
   clear: both;
 }
-.quickview-wrapper .nav-tabs ~ .tab-content .quickview-notes .list > ul li .left {
+.quickview-wrapper .nav-tabs .. .tab-content .quickview-notes .list > ul li .left {
   float: left;
   width: 65%;
   height: 100%;
   padding-top: 9px;
 }
-.quickview-wrapper .nav-tabs ~ .tab-content .quickview-notes .list > ul li .left .checkbox {
+.quickview-wrapper .nav-tabs .. .tab-content .quickview-notes .list > ul li .left .checkbox {
   display: none;
   float: left;
 }
-.quickview-wrapper .nav-tabs ~ .tab-content .quickview-notes .list > ul li .left .checkbox label {
+.quickview-wrapper .nav-tabs .. .tab-content .quickview-notes .list > ul li .left .checkbox label {
   margin-right: 0;
   vertical-align: text-top;
 }
-.quickview-wrapper .nav-tabs ~ .tab-content .quickview-notes .list > ul li .left p {
+.quickview-wrapper .nav-tabs .. .tab-content .quickview-notes .list > ul li .left p {
   margin: 0;
   font-size: 13px;
   font-weight: bold;
@@ -1522,37 +1522,37 @@ body.menu-pin .overlay .overlay-brand {
   vertical-align: middle;
   display: inline-block;
 }
-.quickview-wrapper .nav-tabs ~ .tab-content .quickview-notes .list > ul li .right {
+.quickview-wrapper .nav-tabs .. .tab-content .quickview-notes .list > ul li .right {
   font-size: 10.5px;
   text-align: right;
   width: 35%;
   line-height: 41px;
 }
-.quickview-wrapper .nav-tabs ~ .tab-content .quickview-notes .list > ul li .right .date {
+.quickview-wrapper .nav-tabs .. .tab-content .quickview-notes .list > ul li .right .date {
   margin-right: 10px;
 }
-.quickview-wrapper .nav-tabs ~ .tab-content .quickview-notes .list > ul li:hover {
+.quickview-wrapper .nav-tabs .. .tab-content .quickview-notes .list > ul li:hover {
   background: #f4ecd1;
 }
-.quickview-wrapper .nav-tabs ~ .tab-content .quickview-notes .note {
+.quickview-wrapper .nav-tabs .. .tab-content .quickview-notes .note {
   /* Quickview Note */
   background-image: url('../../img/notes_lines.png');
   background-repeat: repeat-y;
   background-position: 27px top;
 }
-.quickview-wrapper .nav-tabs ~ .tab-content .quickview-notes .note > div {
+.quickview-wrapper .nav-tabs .. .tab-content .quickview-notes .note > div {
   display: table;
   height: 100%;
   width: 100%;
 }
-.quickview-wrapper .nav-tabs ~ .tab-content .quickview-notes .note .toolbar {
+.quickview-wrapper .nav-tabs .. .tab-content .quickview-notes .note .toolbar {
   background: #fcfcfa;
   height: 35px;
   width: 100%;
   display: table-row;
   box-shadow: 0 1px 1px -1px rgba(0, 0, 0, 0.33);
 }
-.quickview-wrapper .nav-tabs ~ .tab-content .quickview-notes .note .toolbar > li {
+.quickview-wrapper .nav-tabs .. .tab-content .quickview-notes .note .toolbar > li {
   display: inline-block;
   border-right: 1px solid #EDECEC;
   float: left;
@@ -1562,68 +1562,68 @@ body.menu-pin .overlay .overlay-brand {
   width: 40px;
   height: auto;
 }
-.quickview-wrapper .nav-tabs ~ .tab-content .quickview-notes .note .toolbar > li > a {
+.quickview-wrapper .nav-tabs .. .tab-content .quickview-notes .note .toolbar > li > a {
   color: #a5a5a5;
   display: block;
   font-size: 14px;
 }
-.quickview-wrapper .nav-tabs ~ .tab-content .quickview-notes .note .toolbar > li > a:hover {
+.quickview-wrapper .nav-tabs .. .tab-content .quickview-notes .note .toolbar > li > a:hover {
   background: #fffaf6;
 }
-.quickview-wrapper .nav-tabs ~ .tab-content .quickview-notes .note .toolbar > li > a.active {
+.quickview-wrapper .nav-tabs .. .tab-content .quickview-notes .note .toolbar > li > a.active {
   color: #333;
   background: #f9f1ea;
 }
-.quickview-wrapper .nav-tabs ~ .tab-content .quickview-notes .note .toolbar:after {
+.quickview-wrapper .nav-tabs .. .tab-content .quickview-notes .note .toolbar:after {
   position: absolute;
   content: "";
   width: 100%;
 }
-.quickview-wrapper .nav-tabs ~ .tab-content .quickview-notes .note .body {
+.quickview-wrapper .nav-tabs .. .tab-content .quickview-notes .note .body {
   display: table-row;
   height: 100%;
 }
-.quickview-wrapper .nav-tabs ~ .tab-content .quickview-notes .note .body > div {
+.quickview-wrapper .nav-tabs .. .tab-content .quickview-notes .note .body > div {
   display: table;
   height: 100%;
   width: 100%;
   padding: 0 20px 0 45px;
   white-space: normal;
 }
-.quickview-wrapper .nav-tabs ~ .tab-content .quickview-notes .note .body .top {
+.quickview-wrapper .nav-tabs .. .tab-content .quickview-notes .note .body .top {
   height: 50px;
   display: table-row;
   clear: both;
   line-height: 50px;
   text-align: center;
 }
-.quickview-wrapper .nav-tabs ~ .tab-content .quickview-notes .note .body .top > a {
+.quickview-wrapper .nav-tabs .. .tab-content .quickview-notes .note .body .top > a {
   float: left;
   color: #b0b0a8;
   margin-left: 10px;
 }
-.quickview-wrapper .nav-tabs ~ .tab-content .quickview-notes .note .body .top > span {
+.quickview-wrapper .nav-tabs .. .tab-content .quickview-notes .note .body .top > span {
   font-style: italic;
   color: #b0b0a8;
   font-size: 11px;
 }
-.quickview-wrapper .nav-tabs ~ .tab-content .quickview-notes .note .body .content {
+.quickview-wrapper .nav-tabs .. .tab-content .quickview-notes .note .body .content {
   display: table-row;
   height: 100%;
 }
-.quickview-wrapper .nav-tabs ~ .tab-content .quickview-notes .note .body .content form {
+.quickview-wrapper .nav-tabs .. .tab-content .quickview-notes .note .body .content form {
   height: 100%;
 }
-.quickview-wrapper .nav-tabs ~ .tab-content .quickview-notes .note .body .content .quick-note-editor {
+.quickview-wrapper .nav-tabs .. .tab-content .quickview-notes .note .body .content .quick-note-editor {
   font-size: 12px;
 }
-.quickview-wrapper .nav-tabs ~ .tab-content .quickview-notes .note .body .content .quick-note-editor:focus {
+.quickview-wrapper .nav-tabs .. .tab-content .quickview-notes .note .body .content .quick-note-editor:focus {
   outline: none;
 }
-.quickview-wrapper .nav-tabs ~ .tab-content .quickview-notes .note .body .content .quick-note-editor::-moz-selection {
+.quickview-wrapper .nav-tabs .. .tab-content .quickview-notes .note .body .content .quick-note-editor::-moz-selection {
   background: #fef8ae;
 }
-.quickview-wrapper .nav-tabs ~ .tab-content .quickview-notes .note .body .content .quick-note-editor::selection {
+.quickview-wrapper .nav-tabs .. .tab-content .quickview-notes .note .body .content .quick-note-editor::selection {
   background: #fef8ae;
 }
 /* Page Container
@@ -5572,32 +5572,32 @@ body > .pgn-wrapper {
 .nav-tabs > li > a .tab-icon {
   margin-right: 6px;
 }
-.nav-tabs ~ .tab-content {
+.nav-tabs .. .tab-content {
   overflow: hidden;
   padding: 15px;
 }
-.nav-tabs ~ .tab-content > .tab-pane.slide-left,
-.nav-tabs ~ .tab-content > .tab-pane.slide-right {
+.nav-tabs .. .tab-content > .tab-pane.slide-left,
+.nav-tabs .. .tab-content > .tab-pane.slide-right {
   -webkit-transition: all 0.3s ease !important;
   transition: all 0.3s ease !important;
 }
-.nav-tabs ~ .tab-content > .tab-pane.slide-left.sliding,
-.nav-tabs ~ .tab-content > .tab-pane.slide-right.sliding {
+.nav-tabs .. .tab-content > .tab-pane.slide-left.sliding,
+.nav-tabs .. .tab-content > .tab-pane.slide-right.sliding {
   opacity: 0 !important;
 }
-.nav-tabs ~ .tab-content > .tab-pane.slide-left.active,
-.nav-tabs ~ .tab-content > .tab-pane.slide-right.active {
+.nav-tabs .. .tab-content > .tab-pane.slide-left.active,
+.nav-tabs .. .tab-content > .tab-pane.slide-right.active {
   -webkit-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
   -ms-transform: translate(0, 0);
   opacity: 1;
 }
-.nav-tabs ~ .tab-content > .tab-pane.slide-left.sliding {
+.nav-tabs .. .tab-content > .tab-pane.slide-left.sliding {
   -webkit-transform: translate3d(10%, 0, 0) !important;
   transform: translate3d(10%, 0, 0) !important;
   -ms-transform: translate(10%, 0) !important;
 }
-.nav-tabs ~ .tab-content > .tab-pane.slide-right.sliding {
+.nav-tabs .. .tab-content > .tab-pane.slide-right.sliding {
   -webkit-transform: translate3d(-10%, 0, 0) !important;
   transform: translate3d(-10%, 0, 0) !important;
   -ms-transform: translate(-10%, 0) !important;
@@ -5625,7 +5625,7 @@ body > .pgn-wrapper {
   float: left;
   padding-right: 0;
 }
-.nav-tabs.nav-tabs-left ~ .tab-content {
+.nav-tabs.nav-tabs-left .. .tab-content {
   border-left: 1px solid rgba(0, 0, 0, 0.1);
   -ms-flex: 1;
   -ms-flex-negative: 0;
@@ -5634,7 +5634,7 @@ body > .pgn-wrapper {
   float: right;
   padding-right: 0;
 }
-.nav-tabs.nav-tabs-right ~ .tab-content {
+.nav-tabs.nav-tabs-right .. .tab-content {
   border-right: 1px solid rgba(0, 0, 0, 0.1);
   -ms-flex: 1;
   -ms-flex-negative: 0;
@@ -5783,7 +5783,7 @@ body > .pgn-wrapper {
   -webkit-transition: color 0.2s ease 0s;
   transition: color 0.2s ease 0s;
 }
-.nav-tabs-linetriangle ~ .tab-content {
+.nav-tabs-linetriangle .. .tab-content {
   background: #fff;
 }
 .nav-tabs-linetriangle.nav-tabs-left.nav-tabs:after {
@@ -5938,7 +5938,7 @@ body > .pgn-wrapper {
   display: block;
   margin: 0;
 }
-.nav-tabs-fillup ~ .tab-content {
+.nav-tabs-fillup .. .tab-content {
   background: #fff;
 }
 .nav-tabs-fillup.nav-tabs-left,
@@ -6026,11 +6026,11 @@ body > .pgn-wrapper {
   content: "";
   clear: both;
 }
-.nav-tabs-header.nav-tabs-linetriangle ~ .tab-content {
+.nav-tabs-header.nav-tabs-linetriangle .. .tab-content {
   position: relative;
   top: -12px;
 }
-.nav-tabs-header ~ .tab-content {
+.nav-tabs-header .. .tab-content {
   overflow: hidden;
   padding: 15px;
 }
@@ -13240,18 +13240,18 @@ Main components
   min-width: 99px;
   padding: 16px 0;
 }
-.builder .nav-tabs ~ .tab-content {
+.builder .nav-tabs .. .tab-content {
   position: relative;
   padding-right: 0px;
   height: 100%;
   top: 0;
   background-color: #fff;
 }
-.builder .nav-tabs ~ .tab-content .tab-pane {
+.builder .nav-tabs .. .tab-content .tab-pane {
   height: 100%;
   overflow-x: hidden !important;
 }
-.builder .nav-tabs ~ .tab-content .tab-pane .scrollable {
+.builder .nav-tabs .. .tab-content .tab-pane .scrollable {
   padding-top: 27px;
   height: calc(100% - 47px);
   overflow-x: hidden !important;
@@ -14010,7 +14010,7 @@ Main components
     margin-left: -36px;
     position: absolute;
   }
-  .toggle-secondary-sidebar ~ .brand {
+  .toggle-secondary-sidebar .. .brand {
     display: none !important;
   }
 }
@@ -14216,7 +14216,7 @@ Main components
     position: static;
     display: block;
   }
-  .toggle-secondary-sidebar ~ .brand {
+  .toggle-secondary-sidebar .. .brand {
     display: none !important;
   }
   .secondary-sidebar {

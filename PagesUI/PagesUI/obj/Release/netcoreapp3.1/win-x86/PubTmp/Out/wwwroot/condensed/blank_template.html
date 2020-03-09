@@ -1,0 +1,12 @@
+{% set TITLE = "- Blank Page" %}
+{% set ASSETS = "assets" %}
+{% set ASSETS_PLUGINS = "assets/plugins" %}
+{% set PAGES_CORE = "pages" %}
+{% set THEME ="pages" %}
+
+{% extends PATH + "layouts/default_layout.html" %}
+{% block css_dependencies %}{% endblock %}
+	{% block page %}
+	{% include PATH + "pages/blank/blank.tpl"%}
+	{% endblock %}
+{% block js_dependencies %}{% endblock %}

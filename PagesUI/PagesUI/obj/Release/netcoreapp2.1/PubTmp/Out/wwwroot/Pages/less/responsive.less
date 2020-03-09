@@ -694,7 +694,7 @@
         left: 50%;
         .margin-left(-36px);
         position: absolute;
-        & ~ .brand{
+        & .. .brand{
             display: none !important;
         }
     }
@@ -881,7 +881,7 @@
             font-size: 18px;
             position: static;
             display: block;
-            & ~ .brand{
+            & .. .brand{
                 display: none !important;
             }
         }
@@ -929,7 +929,7 @@
             .email-content-wrapper{
                 overflow: auto;
                 padding: 0;
-                height: calc(~'100% - 50px');
+                height: calc(..'100% - 50px');
                 .email-content{
                     width: 90%;
                 }

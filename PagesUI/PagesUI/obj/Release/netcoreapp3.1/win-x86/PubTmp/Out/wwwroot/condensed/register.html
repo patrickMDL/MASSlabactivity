@@ -1,0 +1,22 @@
+{% set TITLE = "- Lock Screen" %}
+{% set ASSETS = "assets" %}
+{% set ASSETS_PLUGINS = "assets/plugins" %}
+{% set PAGES_CORE = "pages" %}
+{% set THEME ="pages" %}
+
+{% extends PATH + "layouts/blank_layout.html" %}
+{% block css_dependencies %}{% endblock %}
+  {% block page %}
+  {% include PATH + "pages/register/register.tpl"%}
+  {% endblock %}
+{% block page_js_dependencies %}
+	<script src="assets/plugins/jquery-validation/js/jquery.validate.min.js" type="text/javascript"></script>
+{% endblock %}
+{% block addition_js %}
+    <script>
+    $(function()
+    {
+      $('#form-register').validate()
+    })
+    </script>
+{% endblock %}

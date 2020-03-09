@@ -1,0 +1,27 @@
+{% set TITLE ="- Blank Page" %}
+{% set ASSETS ="assets" %}
+{% set ASSETS_PLUGINS ="assets/plugins" %}
+{% set PAGES_CORE = "pages" %}
+{% set THEME ="pages" %}
+{% set BODY_CLASS ="no-header overflow-hidden" %}
+{% set active_parent ="calendar" %}
+
+{% set PAGE_CONTAINER_CLASS ="bg-white full-height" %}
+{% set CONTENT_WRAPPER_CLASS ="full-height" %}
+{% set CONTENT_CLASS ="full-height" %}
+
+{% extends PATH + "layouts/default_layout.html" %}
+{% block css_dependencies %}{% endblock %}
+  {% block page %}
+  {% include PATH + "pages/calendar/calendar_lang.tpl"%}
+  {% endblock %}
+{% block page_js_dependencies %}
+<script src="assets/plugins/interactjs/interact.min.js" type="text/javascript"></script>
+<script src="assets/plugins/moment/moment-with-locales.min.js"></script>
+{% endblock %}
+{% block addition_core_pages_js %}
+<script src="pages/js/pages.calendar.min.js"></script>
+{% endblock %}
+{% block addition_js %}
+<script src="assets/js/calendar_lang.js" type="text/javascript"></script>
+{% endblock %}

@@ -1,0 +1,13 @@
+{% set TITLE = "- Horizontal Menu" %}
+{% set ASSETS = "assets" %}
+{% set ASSETS_PLUGINS = "assets/plugins" %}
+{% set PAGES_CORE = "pages" %}
+{% set THEME ="pages" %}
+{% set BODY_CLASS = "horizontal-menu" %}
+{% set active_parent = "horizontal_menu" %}
+{% extends PATH + "layouts/horizontal_layout.html" %}
+{% block css_dependencies %}{% endblock %}
+  {% block page %}
+  {% include PATH + "pages/layouts/horizontal_menu.tpl"%}
+  {% endblock %}
+{% block js_dependencies %}{% endblock %}

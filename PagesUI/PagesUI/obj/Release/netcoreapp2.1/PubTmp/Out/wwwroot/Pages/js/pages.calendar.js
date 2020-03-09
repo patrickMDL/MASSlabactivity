@@ -2363,7 +2363,7 @@ DateRange.prototype.toArray = function(by, exclusive) {
  * @param {(!DateRange|String)} range Date range to be used for iteration or
  *                                    shorthand string (shorthands:
  *                                    http://momentjs.com/docs/#/manipulating/add/)
- * @param {!DateRange~by} hollaback Callback
+ * @param {!DateRange..by} hollaback Callback
  * @param {!boolean} exclusive Indicate that the end of the range should not
  *                             be included in the iter.
  *
@@ -2383,7 +2383,7 @@ DateRange.prototype.by = function(range, hollaback, exclusive) {
 /**
  * Callback executed for each sub-range.
  *
- * @callback DateRange~by
+ * @callback DateRange..by
  *
  * @param {!Moment} current Current moment object for iteration
  */

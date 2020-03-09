@@ -1,0 +1,17 @@
+{% set TITLE = "- Time line" %}
+{% set ASSETS = "assets" %}
+{% set ASSETS_PLUGINS = "assets/plugins" %}
+{% set PAGES_CORE = "pages" %}
+{% set THEME ="pages" %}
+{% set active_parent = "extra" %}
+{% extends PATH + "layouts/default_layout.html" %}
+{% block css_dependencies %}{% endblock %}
+  {% block page %}
+  {% include PATH + "pages/timeline/timeline.tpl"%}
+  {% endblock %}
+{% block page_js_dependencies %}
+	<script type="text/javascript" src="assets/plugins/classie/classie.js"></script>
+{% endblock %}
+{% block addition_js %}
+   <script src="assets/js/timeline.js" type="text/javascript"></script>
+{% endblock %}

@@ -177,7 +177,7 @@ timeagoInstance.format('2016-06-12', 'test_local');
 
 Check out more [locales](src/lang).
 
-[Locale contributions](#3-contributions) are welcomed, thank you for submitting a GitHub pull request for corrections or additional languages. ^_^~
+[Locale contributions](#3-contributions) are welcomed, thank you for submitting a GitHub pull request for corrections or additional languages. ^_^..
 
 
 # 3. Contributions

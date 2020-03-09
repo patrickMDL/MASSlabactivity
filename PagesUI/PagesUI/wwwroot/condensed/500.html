@@ -1,0 +1,13 @@
+{% set TITLE = "- Blank Page" %}
+{% set ASSETS = "assets" %}
+{% set ASSETS_PLUGINS = "assets/plugins" %}
+{% set PAGES_CORE = "pages" %}
+{% set BODY_CLASS = "error-page" %}
+{% set THEME ="pages" %}
+{% extends PATH + "layouts/blank_layout.html" %}
+{% block css_dependencies %}{% endblock %}
+  {% block page %}
+  {% set error_no = "500" %}
+  {% include PATH + "pages/error/error.tpl"%}
+  {% endblock %}
+{% block js_dependencies %}{% endblock %}

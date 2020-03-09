@@ -1,0 +1,14 @@
+{% set TITLE = "- Views" %}
+{% set ASSETS = "assets" %}
+{% set ASSETS_PLUGINS = "assets/plugins" %}
+{% set PAGES_CORE = "pages" %}
+{% set THEME ="pages" %}
+{% set active_parent = "views" %}
+{% extends PATH + "layouts/mobile_view_layout.html" %}
+{% block css_dependencies %}{% endblock %}
+  {% block page %}
+  {% include PATH + "pages/views/push.tpl"%}
+  {% endblock %}
+{% block page_js_dependencies %}{% endblock %}
+{% block addition_js %}
+{% endblock %}

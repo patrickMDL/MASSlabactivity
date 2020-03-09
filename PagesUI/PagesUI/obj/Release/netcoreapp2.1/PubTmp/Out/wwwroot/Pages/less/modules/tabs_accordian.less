@@ -45,7 +45,7 @@
       }
     }
   }
-  & ~ .tab-content {
+  & .. .tab-content {
     overflow: hidden;
     padding: 15px;
     & > .tab-pane {
@@ -90,7 +90,7 @@
   &.nav-tabs-left {
     float: left;
     padding-right:0;
-    & ~ .tab-content {
+    & .. .tab-content {
       border-left: 1px solid rgba(0, 0, 0, 0.1);
       //IE10 Fix
      -ms-flex: 1;
@@ -100,7 +100,7 @@
   &.nav-tabs-right {
     float: right;
     padding-right: 0;
-    & ~ .tab-content {
+    & .. .tab-content {
       border-right: 1px solid rgba(0, 0, 0, 0.1);
       //IE10 Fix
      -ms-flex: 1;
@@ -196,7 +196,7 @@
         }
       }
     }
-    & ~ .tab-content {
+    & .. .tab-content {
     }
   }
   &.nav-tabs-left {
@@ -275,7 +275,7 @@
       }
     }
   }
-  & ~ .tab-content {
+  & .. .tab-content {
     background: #fff;
   }
   // POSITIONG OPTIONS
@@ -362,7 +362,7 @@
         background: none repeat scroll 0 0 @color-success;
         border: 1px solid @color-success;
         content: "";
-        height: calc(~'100% + 1px');
+        height: calc(..'100% + 1px');
         left: 0;
         position: absolute;
         top: 0;
@@ -435,7 +435,7 @@
     display: block;
     margin: 0;
   }
-  & ~ .tab-content {
+  & .. .tab-content {
     background: #fff;
   }
   // POSITIONG OPTIONS
@@ -448,7 +448,7 @@
     & > li {
       & > a {
         &:after {
-          width: calc(~'100% + 1px');
+          width: calc(..'100% + 1px');
           height: 100%;
         }
       }
@@ -528,13 +528,13 @@
       content: "";
       clear: both;    
     }
-    &  ~ .tab-content{
+    &  .. .tab-content{
       position: relative;
       top:-12px;
     }
   }
 }
-.nav-tabs-header ~ .tab-content{
+.nav-tabs-header .. .tab-content{
   overflow: hidden;
   padding: 15px;
 }

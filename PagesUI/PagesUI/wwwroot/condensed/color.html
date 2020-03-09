@@ -1,0 +1,12 @@
+{% set TITLE = "- Color" %}
+{% set ASSETS = "assets" %}
+{% set ASSETS_PLUGINS = "assets/plugins" %}
+{% set PAGES_CORE = "pages" %}
+{% set THEME ="pages" %}
+{% set active_parent = "ui" %}
+{% extends PATH + "layouts/default_layout.html" %}
+{% block css_dependencies %}{% endblock %}
+	{% block page %}
+	{% include PATH + "pages/ui/color/color.tpl"%}
+	{% endblock %}
+{% block js_dependencies %}{% endblock %}

@@ -57,7 +57,7 @@ using PagesUI.Models;
             WriteLiteral("<!DOCTYPE html>\n<html>\n");
             EndContext();
             BeginContext(23, 4305, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("head", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "c4073097292e42ef9d7958de4d0b0bc9", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("head", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "2c865cf0d9a944858a5a3bcf87cc96b5", async() => {
                 BeginContext(29, 453, true);
                 WriteLiteral(@"
     <meta http-equiv=""content-type"" content=""text/html;charset=UTF-8"" />
@@ -88,7 +88,7 @@ WriteAttributeValue("", 492, ViewBag.Description, 492, 20, false);
     ");
                 EndContext();
                 BeginContext(1076, 3200, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("environment", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "bd762edec859400895db7064812979a5", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("environment", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "8c532c30aa544af1909d6094c0fc299c", async() => {
                     BeginContext(1109, 3153, true);
                     WriteLiteral(@"
         <link rel=""apple-touch-icon"" href=""../pages/ico/60.png"">
@@ -168,7 +168,7 @@ Write(RenderSection("css", required: false));
             WriteLiteral("\n");
             EndContext();
             BeginContext(4329, 17472, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "ed1b3fb20f1c44938398b72f4b4fbcdc", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "6834f8c18ffe40ec9a18a7e431586771", async() => {
                 BeginContext(4366, 91, true);
                 WriteLiteral("\n\n    <div class=\"page-container \">\n        <div class=\"page-content-wrapper\">\n            ");
                 EndContext();
@@ -344,7 +344,7 @@ Write(RenderSection("css", required: false));
     ");
                 EndContext();
                 BeginContext(13227, 8465, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("environment", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "281dcb93aff84a20986d3f87376c2227", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("environment", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "e0247c2156b54d2296879e2e911d2668", async() => {
                     BeginContext(13260, 2, true);
                     WriteLiteral("\n\n");
                     EndContext();

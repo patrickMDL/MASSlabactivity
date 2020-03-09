@@ -30,3 +30,4 @@ C:\Users\Patrick\Desktop\MASSlabactivity\PagesUI\PagesUI\obj\Release\netcoreapp2
 C:\Users\Patrick\Desktop\MASSlabactivity\PagesUI\PagesUI\obj\Release\netcoreapp2.1\PagesUI.dll
 C:\Users\Patrick\Desktop\MASSlabactivity\PagesUI\PagesUI\obj\Release\netcoreapp2.1\PagesUI.pdb
 C:\Users\Patrick\Desktop\MASSlabactivity\PagesUI\PagesUI\obj\Release\netcoreapp2.1\PagesUI.csproj.CopyComplete
+C:\Users\Patrick\Desktop\MASSlabactivity\PagesUI\PagesUI\obj\Release\netcoreapp2.1\Razor\Views\Account\Heatmap.cshtml.g.cs

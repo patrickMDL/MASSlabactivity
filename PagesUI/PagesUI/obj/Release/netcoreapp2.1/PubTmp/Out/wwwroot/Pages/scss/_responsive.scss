@@ -827,7 +827,7 @@
             font-size: 18px;
             position: static;
             display: block;
-            & ~ .brand{
+            & .. .brand{
                 display: none !important;
             }
         }
