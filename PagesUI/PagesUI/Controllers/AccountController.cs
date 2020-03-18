@@ -29,8 +29,6 @@ namespace PagesUI.Controllers
         [HttpPost]
         public IActionResult Login(string username, string password)
         {
-            
-
                 return RedirectToAction("/Weather");
             
         }

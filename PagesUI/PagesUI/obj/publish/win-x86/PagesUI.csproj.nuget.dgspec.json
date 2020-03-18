@@ -1,26 +1,21 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Patrick\\Desktop\\MASSlabactivity\\PagesUI\\PagesUI\\PagesUI.csproj": {}
+    "C:\\Users\\patri\\Desktop\\MASSlabactivity\\PagesUI\\PagesUI\\PagesUI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Patrick\\Desktop\\MASSlabactivity\\PagesUI\\PagesUI\\PagesUI.csproj": {
+    "C:\\Users\\patri\\Desktop\\MASSlabactivity\\PagesUI\\PagesUI\\PagesUI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Patrick\\Desktop\\MASSlabactivity\\PagesUI\\PagesUI\\PagesUI.csproj",
+        "projectUniqueName": "C:\\Users\\patri\\Desktop\\MASSlabactivity\\PagesUI\\PagesUI\\PagesUI.csproj",
         "projectName": "PagesUI",
-        "projectPath": "C:\\Users\\Patrick\\Desktop\\MASSlabactivity\\PagesUI\\PagesUI\\PagesUI.csproj",
-        "packagesPath": "C:\\Users\\Patrick\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Patrick\\Desktop\\MASSlabactivity\\PagesUI\\PagesUI\\obj\\publish\\win-x86\\",
+        "projectPath": "C:\\Users\\patri\\Desktop\\MASSlabactivity\\PagesUI\\PagesUI\\PagesUI.csproj",
+        "packagesPath": "C:\\Users\\patri\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\patri\\Desktop\\MASSlabactivity\\PagesUI\\PagesUI\\obj\\publish\\win-x86\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Microsoft\\Xamarin\\NuGet\\",
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Patrick\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Users\\patri\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
@@ -71,15 +66,15 @@
           "downloadDependencies": [
             {
               "name": "Microsoft.AspNetCore.App.Runtime.win-x86",
-              "version": "[3.1.1, 3.1.1]"
+              "version": "[3.1.2, 3.1.2]"
             },
             {
               "name": "Microsoft.NETCore.App.Runtime.win-x86",
-              "version": "[3.1.1, 3.1.1]"
+              "version": "[3.1.2, 3.1.2]"
             },
             {
               "name": "Microsoft.WindowsDesktop.App.Runtime.win-x86",
-              "version": "[3.1.1, 3.1.1]"
+              "version": "[3.1.2, 3.1.2]"
             }
           ],
           "frameworkReferences": {
@@ -90,7 +85,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.200\\RuntimeIdentifierGraph.json"
         }
       },
       "runtimes": {

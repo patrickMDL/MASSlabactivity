@@ -1,26 +1,21 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Patrick\\Desktop\\MASSlabactivity\\PagesUI\\PagesUI\\PagesUI.csproj": {}
+    "C:\\Users\\patri\\Desktop\\MASSlabactivity\\PagesUI\\PagesUI\\PagesUI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Patrick\\Desktop\\MASSlabactivity\\PagesUI\\PagesUI\\PagesUI.csproj": {
+    "C:\\Users\\patri\\Desktop\\MASSlabactivity\\PagesUI\\PagesUI\\PagesUI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Patrick\\Desktop\\MASSlabactivity\\PagesUI\\PagesUI\\PagesUI.csproj",
+        "projectUniqueName": "C:\\Users\\patri\\Desktop\\MASSlabactivity\\PagesUI\\PagesUI\\PagesUI.csproj",
         "projectName": "PagesUI",
-        "projectPath": "C:\\Users\\Patrick\\Desktop\\MASSlabactivity\\PagesUI\\PagesUI\\PagesUI.csproj",
-        "packagesPath": "C:\\Users\\Patrick\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Patrick\\Desktop\\MASSlabactivity\\PagesUI\\PagesUI\\obj\\",
+        "projectPath": "C:\\Users\\patri\\Desktop\\MASSlabactivity\\PagesUI\\PagesUI\\PagesUI.csproj",
+        "packagesPath": "C:\\Users\\patri\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\patri\\Desktop\\MASSlabactivity\\PagesUI\\PagesUI\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Microsoft\\Xamarin\\NuGet\\",
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Patrick\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Users\\patri\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
@@ -76,7 +71,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.200\\RuntimeIdentifierGraph.json"
         }
       }
     }
