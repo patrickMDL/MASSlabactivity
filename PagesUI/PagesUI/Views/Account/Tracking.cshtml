@@ -1,4 +1,5 @@
-﻿<html lang="en" class=" js no-touch csstransforms3d csstransitions">
+﻿@model IEnumerable<PagesUI.Models.Mwlocations>
+<html lang="en" class=" js no-touch csstransforms3d csstransitions">
 <head>
     <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
     <meta charset="utf-8" />
@@ -24,7 +25,32 @@
     <link class="main-stylesheet" href="../pages/css/pages.css" rel="stylesheet" type="text/css" />
     <link class="main-stylesheet" href="../assets/css/style.css" rel="stylesheet" type="text/css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $.get('/Account/GetUser/', function (data) {
+                $("#userName").html(data);
+                console.log(data);
+            });
+            var interval = setInterval(function () {
 
+                navigator.geolocation.getCurrentPosition(function (position) {
+                    var currentDate = new Date();
+                    var dt = currentDate.getFullYear().toString() + '-' + currentDate.getMonth().toString() + currentDate.getDate().toString() + '-' + ' ' + currentDate.getHours().toString() + ":" + currentDate.getMinutes().toString() + ":" + currentDate.getSeconds().toString(); // Current Day
+                    var obj = new Object();
+                    var latitude = position.coords.latitude.toString();
+                    var longitude = position.coords.longitude.toString();
+                    var id = 3;
+                    $.get('/Account/GetID', function (data) { id = data; });
+
+                    obj = { Long: longitude, Lat: latitude, Day_time: dt, MwaccountID: id }; //json string
+                    $.post('/Account/Create', { cust: JSON.stringify(obj) },
+                        function (data) {
+
+                        });
+                });
+            }, 60000);
+        });
+    </script>
     <link class="main-stylesheet" href="../assets/css/style.css" rel="stylesheet" type="text/css">
     <style type="text/css">
         .jqstooltip {
@@ -62,14 +88,16 @@
 
     <nav class="page-sidebar" data-pages="sidebar">
         <div class="sidebar-header">
-            <img src="../assets/img/logo_white.png" alt="logo" class="brand" data-src="../assets/img/logo_white.png" data-src-retina="../assets/img/logo_white_2x.png"height="22">
+            <img src="../assets/img/logo_white.png" alt="logo" class="brand" data-src="../assets/img/logo_white.png" data-src-retina="../assets/img/logo_white_2x.png" height="22">
             <div class="sidebar-header-controls">
-
+                <button aria-label="Pin Menu" type="button" id="bntToggle" class="btn bg-transparent border-0 invert d-lg-inline-block d-xlg-inline-block d-md-inline-block d-sm-none d-none" data-toggle-pin="sidebar">
+                    <i class="fa fa-chevron-right"></i>
+                </button>
             </div>
         </div>
 
 
-        <div class="sidebar-menu">
+        <div class="sidebar-menu" id="IDsidebar">
             <div class="scroll-wrapper menu-items" style="position: relative;">
                 <ul class="menu-items scroll-content scroll-scrolly_visible" style="height: auto; margin-bottom: 0px; margin-right: 0px; max-height: 735px;">
                     <li class="m-t-20 ">
@@ -77,7 +105,7 @@
                         <a href="../Account/Weather" class="text-white detailed">
                             <span class="text-white title">Weather</span>
                         </a>
-                        <span class="icon-thumbnail" ><i class="fa fa-cloud white fa-5x" style="icon:auto"></i></span>
+                        <span class="icon-thumbnail"><i class="fa fa-cloud white fa-5x" style="icon:auto"></i></span>
                     </li>
                     <li class="">
                         <a href="../Account/Heatmap" class="detailed">
@@ -93,7 +121,6 @@
             </div>
             <div class="clearfix"></div>
         </div>
-
     </nav>
 
     <div class="page-container ">
@@ -101,11 +128,73 @@
             <div class="brand inline   ">
                 <img src="../assets/img/logo.png" alt="logo" data-src="../assets/img/logo.png" data-src-retina="../assets/img/logo.png">
             </div>
+            <div class="d-flex align-items-center">
+                <a id="userName"></a>
+            </div>
         </div>
-        
+        <!--
+            <div class="page-content-wrapper ">
+                <div class="content sm-gutter">
+                    <div class="container-fluid padding-25 sm-padding-10">
+                        <div class="row">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>
+                                            @Html.DisplayNameFor(model => model.Id)
+                                        </th>
+                                        <th>
+                                            @Html.DisplayNameFor(model => model.Long)
+                                        </th>
+                                        <th>
+                                            @Html.DisplayNameFor(model => model.Lat)
+                                        </th>
+                                        <th>
+                                            @Html.DisplayNameFor(model => model.Dt)
+                                        </th>
+                                        <th>
+                                            @Html.DisplayNameFor(model => model.MwaccountID)
+                                        </th>
+                                        <th></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (var item in Model) {
+                                    <tr>
+                                        <th>
+                                            @Html.DisplayFor(modelItem => item.Id)
+                                        </th>
+                                        <th>
+                                            @Html.DisplayFor(modelItem => item.Long)
+                                        </th>
+                                        <th>
+                                            @Html.DisplayFor(modelItem => item.Lat)
+                                        </th>
+                                        <th>
+                                            @Html.DisplayFor(modelItem => item.Dt)
+                                        </th>
+                                        <th>
+                                            @Html.DisplayFor(modelItem => item.MwaccountID)
+                                        </th>
+                                        <td>
+                                            <a asp-action="Delete" asp-route-id="@item.Id" onclick="return confirm('Are sure wants to delete?');">Delete</a>
+
+                                        </td>
+                                    </tr>
+
+    }
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                -->
+
 
         <div class=" container-fluid   footer">
             <div class="copyright sm-text-center">
+
                 <p class="small">
                     Copyright &copy; 2020 <b><a href="http://portal.mass.com.br">MASS Labs</a></b>. Todos os Direitos Reservados.
                 </p>

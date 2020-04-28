@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <parameters>
-  <parameter name="IIS Web Application Name" description="" value="massweather" tags="IisApp">
+  <parameter name="IIS Web Application Name" description="" value="testesUI" tags="IisApp">
     <parameterEntry kind="ProviderPath" scope="IisApp" match="^C:\\Users\\patri\\Desktop\\MASSlabactivity\\PagesUI\\PagesUI\\obj\\Debug\\netcoreapp3\.1\\PubTmp\\Out\\$" />
   </parameter>
 </parameters>

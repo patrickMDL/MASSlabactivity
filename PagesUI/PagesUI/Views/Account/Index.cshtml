@@ -72,7 +72,7 @@
                     <div class="form-group form-group-default">
                         <label><label for="Email">Login</label></label>
                         <div class="controls">
-                            <input class="form-control" data-val="true" data-val-email="The Login field is not a valid e-mail address." data-val-required="The Login field is required." id="Email" name="Email" placeholder="Digite seu email" type="text" value="" />
+                            <input class="form-control" data-val="true" data-val-email="The Login field is not a valid e-mail address." data-val-required="The Login field is required." id="Email" name="Email" placeholder="Digite seu email" type="email" value="" />
                         </div>
                     </div>
 
@@ -238,7 +238,7 @@
 
             var email = $.trim($('#Email').val()),
                 password = $.trim($('#Password').val());
-
+            
             if (email.length === 0) {
                 $('#msg-return').html('Informe o email.');
                 return false;
@@ -249,21 +249,28 @@
             }
             else {
                 event.preventDefault();
+                obj = { Email: email, Pwd: password };
+                $.post('/Account/ValidateEmail', { cust: JSON.stringify(obj) }, function (data) {
+                    if (data == "404") {
+                        $('#msg-return').html('Informe um email válido');
+                    } else if (data == "200") {
+                        
 
-                if ($("[name='ckbLembrarEmail']").is(":checked"))
-                    document.cookie = "Email=" + $('#Email').val();
-
-                $.post('/Account/Login/', formLogin.serialize(),
-                    function (data) {
-                        if (data != null) {
-                            document.location.href = "Account/Weather";
-
-                        }
-                        else {
-                            $('#msg-return').html('Não foi possível realizar o seu login, usuário ou senha inválida.');
-                        }
-                    });
+                        if ($("[name='ckbLembrarEmail']").is(":checked"))
+                            document.cookie = "Email=" + $('#Email').val();
+                        $.post('/Account/Login/', { cust: JSON.stringify(obj) },
+                            function (data) {
+                                if (data == "200") {
+                                    document.location.href = "Account/Weather";
+                                }
+                                else if (data == "404") {
+                                    $('#msg-return').html('Não foi possível realizar o seu login, usuário ou senha inválida.');
+                                }
+                            });
+                    }
+                });
             }
+
         });
 
         $(document).ready(function () {

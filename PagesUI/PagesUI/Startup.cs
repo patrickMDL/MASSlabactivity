@@ -9,6 +9,7 @@ using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using PagesUI.Models;
 
 namespace PagesUI
 {
@@ -31,11 +32,28 @@ namespace PagesUI
                 options.MinimumSameSitePolicy = SameSiteMode.None;
             });
 
+            services.AddDistributedMemoryCache();
+
+            services.AddSession(options =>
+            {
+                options.IdleTimeout = TimeSpan.FromSeconds(10);
+                options.Cookie.HttpOnly = true;
+                options.Cookie.IsEssential = true;
+            });
+
+            services.AddControllersWithViews();
+            services.AddRazorPages();
+
+            services.AddSession();
+            services.AddDistributedMemoryCache();
+            services.AddHttpContextAccessor();
+            services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
             services.AddMvc(options => options.EnableEndpointRouting = false);
-            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_3_0);
+                services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_3_0);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
+        [Obsolete]
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
             if (env.IsDevelopment())
@@ -51,13 +69,20 @@ namespace PagesUI
             app.UseHttpsRedirection();
             app.UseStaticFiles();
             app.UseCookiePolicy();
+            app.UseRouting();
+            app.UseAuthentication();
+            app.UseAuthorization();
+            app.UseSession();
 
-            app.UseMvc(routes =>
+            app.UseEndpoints(endpoints =>
             {
-                routes.MapRoute(
+                endpoints.MapControllerRoute(
                     name: "default",
-                    template: "{controller=Account}/{action=Index}/{id?}");
+                    pattern: "{controller=Account}/{action=Index}/{id?}");
             });
+
+
+
         }
     }
 }

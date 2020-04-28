@@ -36,6 +36,14 @@
     <link class="main-stylesheet" href="../assets/css/style.css" rel="stylesheet" type="text/css" />
     <meta charset="utf-8">
     <title>Heatmaps</title>
+    <script>
+        $(document).ready(function () {
+            $.get('/Account/GetUser/', function (data) {
+                $("#userName").html(data);
+                console.log(data);
+            });
+        });
+    </script>
     <style>
         /* Always set the map height explicitly to define the size of the div
         * element that contains the map. */
@@ -80,12 +88,14 @@
         <div class="sidebar-header">
             <img src="../assets/img/logo_white.png" alt="logo" class="brand" data-src="../assets/img/logo_white.png" data-src-retina="../assets/img/logo_white_2x.png" height="22">
             <div class="sidebar-header-controls">
-
+                <button aria-label="Pin Menu" type="button" id="bntToggle" class="btn bg-transparent border-0 invert d-lg-inline-block d-xlg-inline-block d-md-inline-block d-sm-none d-none" data-toggle-pin="sidebar">
+                    <i class="fa fa-chevron-right"></i>
+                </button>
             </div>
         </div>
 
 
-        <div class="sidebar-menu">
+        <div class="sidebar-menu" id="IDsidebar">
             <div class="scroll-wrapper menu-items" style="position: relative;">
                 <ul class="menu-items scroll-content scroll-scrolly_visible" style="height: auto; margin-bottom: 0px; margin-right: 0px; max-height: 735px;">
                     <li class="m-t-20 ">
@@ -93,11 +103,11 @@
                         <a href="../Account/Weather" class="text-white detailed">
                             <span class="text-white title">Weather</span>
                         </a>
-                        <span class="icon-thumbnail" ><i class="fa fa-cloud white fa-5x" style="icon:auto"></i></span>
+                        <span class="icon-thumbnail"><i class="fa fa-cloud white fa-5x" style="icon:auto"></i></span>
                     </li>
                     <li class="">
                         <a href="../Account/Heatmap" class="detailed">
-                            <span class="text-white title" >Heatmap</span>
+                            <span class="text-white title">Heatmap</span>
                         </a>
                         <span class="icon-thumbnail" style="background:#0094ff"><i class="pg-map fa-2x"></i></span>
                     </li>
@@ -115,6 +125,9 @@
         <div class="header">
             <div class="brand inline   ">
                 <img src="../assets/img/logo.png" alt="logo" data-src="../assets/img/logo.png" data-src-retina="../assets/img/logo.png">
+            </div>
+            <div class="d-flex align-items-center">
+                <a id="userName"></a>
             </div>
         </div>
         <div id="floating-panel">
@@ -710,6 +723,7 @@
 
 
     <div class="pg-colors"><div class="bg-success-light" data-color="success-light"></div><div class="bg-contrast-low" data-color="contrast-low"></div><div class="bg-complete-light" data-color="complete-light"></div><div class="bg-contrast-lower" data-color="contrast-lower"></div><div class="bg-danger" data-color="danger"></div><div class="bg-success" data-color="success"></div><div class="bg-primary" data-color="primary"></div><div class="bg-complete" data-color="complete"></div></div><div id="pg-visible-sm" class="visible-sm"></div><div id="pg-visible-xs" class="visible-xs"></div>
-
+    <script>
+    </script>
 </body>
 </html>

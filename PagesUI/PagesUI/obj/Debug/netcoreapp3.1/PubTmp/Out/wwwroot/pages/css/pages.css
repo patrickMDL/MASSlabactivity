@@ -1,4 +1,4 @@
-/*------------------------------------------------------------------
+Ôªø/*------------------------------------------------------------------
 Pages v3.0.0
 Theme : Default
 Generated From SASS
@@ -347,7 +347,17 @@ body {
 */
 
 
+body.sidebar-visible .page-sidebar .menu-items .icon-thumbnail {
+    -webkit-transform: translate3d(-14px,0,0);
+    transform: translate3d(-14px,0,0);
+    -ms-transform: translate(-14px,0)
+}
 
+body.sidebar-visible .page-sidebar .sidebar-header .sidebar-header-controls {
+    -webkit-transform: translate3d(58px,0,0);
+    transform: translate3d(58px,0,0);
+    -ms-transform: translate(58px,0)
+}
 
 .page-sidebar {
     width: 280px;
@@ -404,29 +414,36 @@ body {
         color: #fff;
         width: 100%;
         padding: 0 20px;
-        padding-left: 30px;
+        padding-left: 15px;
         clear: both;
-        z-index: 10;
+        z-index: 0;
         position: relative;
     }
 
         .page-sidebar .sidebar-header .sidebar-header-controls {
             display: inline-block;
-            -webkit-transition: -webkit-transform 0.4s cubic-bezier(0.05, 0.74, 0.27, 0.99);
-            transition: transform 0.4s cubic-bezier(0.05, 0.74, 0.27, 0.99);
-            -webkit-backface-visibility: hidden;
+            -webkit-transition: -webkit-transform 0 .4s cubic-bezier(.05,.74,.27,.99);
+            transition: transform 0 .4s cubic-bezier(.05,.74,.27,.99);
+            -webkit-backface-visibility: hidden
         }
 
+            .page-sidebar .sidebar-header .sidebar-header-controls .btn i {
+                width: 18px;
+                height: 18px;
+                margin: 0
+            }
+
         .page-sidebar .sidebar-header .sidebar-slide-toggle i {
-            -webkit-transition: all 0.12s ease;
-            transition: all 0.12s ease;
+            -webkit-transition: all .12s ease;
+            transition: all .12s ease
         }
 
         .page-sidebar .sidebar-header .sidebar-slide-toggle.active i {
             -webkit-transform: rotate(-180deg);
             -ms-transform: rotate(-180deg);
-            transform: rotate(-180deg);
+            transform: rotate(-180deg)
         }
+
 
     .page-sidebar .close-sidebar {
         position: absolute;
@@ -9253,7 +9270,7 @@ select.full-width + .select2-container {
     z-index: 1051;
 }
 
-/*Se descomentar essa linha, o datepicker n„o vai funcionar no modal incluir cart„o*/
+/*Se descomentar essa linha, o datepicker n√£o vai funcionar no modal incluir cart√£o*/
 /*.modal-open .datepicker.dropdown-menu {
     z-index: 10000 !important;
 }*/
